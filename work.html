@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href ="./styles.css" rel="stylesheet" type="text/css">
+    <title>P. Maxwell Ward | Animation | Illustration</title>
+</head>
+<body>
+	<header>
+		<h1><a href="./"><img src="images/header.png" alt="header"></a></h1>
+	</header>
+	<div id="menu">
+		<div><a href="./work.html"><img src="images/menuItems0001.png" alt="work"></a></div>
+		<div><a href="./info.html"><img src="images/menuItems0002.png" alt="info"></a></div>
+		<div><a href="./news.html"><img src="images/menuItems0003.png" alt="news"></a></div>
+	</div>
+    <button class ="collapsible"><em>Doomed | Short Film</em></button>
+    <div class="content">
+        <p>I was sitting in a Wal-Mart parking lot, and while bracing myself to leave the car 
+            and go shopping, I had the idea for this film.<br><br>
+            Awards<br>
+            New Orleans Film Festival | Official Selection 2017<br>
+            Cape Town Intl. Animation Festival | Official Selection 2017<br>
+            Mexico International Film Festival | Official Selection 2017
+        </p>
+    </div>
+    <button class ="collapsible"><em>Rosie & Joe | FX Series</em></button>
+    <div class="content">
+        <p>My friends Zim+Teemo asked me to animate on this upcoming project they produced for the FX 
+            network. Zim+Teemo made all the artwork which I assembled and animated in After Effects. 
+            It was hard work, but I had fun.<br><br>
+        See more of Zim+Teemo: <a href="http://www.zimteemo.com">www.zimteemo.com</a>
+        </p>
+    </div>
+    <button class ="collapsible"><em>Short Life of Trouble | Concept Trailer</em></button>
+    <div class="content">
+        <p>I animated this trailer for a game conceptualized between my friends Ben, Calder, and myself. 
+            You navigate country musicians through a distorted, mixed-media world while having 
+            experiences, completing objectives, and then writing songs about it. You use those songs 
+            to tour, perform, make money, and upgrade or downgrade your life as you see fit.
+        </p>
+    </div>
+    <button class ="collapsible"><em>GIFs | Illustrations | Comics</em></button>
+    <div class="content">
+        <p>Various illustrations and animated GIFs I've done for honky tonky shows, 
+            progressive magazines, and personal satisfaction.
+        </p>
+    </div>
+    <button class ="collapsible"><em>WGNO Holiday Card | Commercial</em></button>
+    <div class="content">
+        <p>A charming little 3D spot done for the 2018 Holiday season. I wrote, storyboared, and 
+            animated the characters in this spot and Justin Babin created the environments, colors, 
+            and animated the camera.<br><br>
+            More of Justin Babin: <a href="http://www.jbabsdesign.com">www.jbabsdesign.com</a>
+        </p>
+    </div>
+    <button class ="collapsible"><em>5 Ways to Be An Alpha Male | Short Film</em></button>
+    <div class="content">
+        <p>I made this for The Backyard Film Festival in New Orleans. The theme was "Macho" and
+            this is what I came up with. I made the silly song in GarageBand and finished it in 
+            about 2 weeks in my spare time. I had fun doing it, but don't plan on tackling topical
+            subjects again.
+        </p>  
+    </div>
+    <button class ="collapsible"><em>Mashed Potato Mash-cots | Short Film</em></button>
+    <div class="content">
+        <p>I can't remember why or when I made this, but people seem to enjoy this more than my serious films
+            that have been in film festivals and stuff.
+        </p>
+    </div>
+    <button class ="collapsible"><em>Seinfeld Living Room | Commercial</em></button>
+    <div class="content">
+        <p>I painstakingly re-created the apartment from Seinfeld in this promo. I used cheap craft 
+            paint, cardboard, and a hot glue gun. I think the most expensive item was the wood panel
+            used for the floor.
+        </p>
+    </div>
+    <button class ="collapsible"><em>NRG: In The Future | Commercial</em></button>
+    <div class="content">
+        <p>My first commercial project! I actually had quite a big role on it, too. I storyboarded,
+            created the artwork, and animated a few of the characters. The guy tripping with the boxes
+            in "Wireless Electricity" is still one of my favorite pieces I've animated.<br><br>
+            I producted while at 808 inc. In Houston, TX.<br>
+            See more of their work at <a href="http://808inc.com">www.808inc.com</a>
+        </p>
+    </div>
+    <button class ="collapsible"><em>Swallowed Kin | Short Film</em></button>
+    <div class="content">
+        <p>My first short film. It's a bit odd but we keep it around the for the good memories</p>
+    </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}</script>
+
+</body>
+</html>

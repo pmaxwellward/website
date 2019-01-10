@@ -1,0 +1,126 @@
+a {
+    color: #000000;
+    text-decoration: none;
+}
+h1 {
+    max-width: 100%;
+    height: auto;
+    display: -webkit-flex; 
+    -webkit-justify-content: center;
+    display: flex;
+    justify-content: center; 
+    margin: 10px auto;
+}
+
+#menu {
+    width: 300px;
+    height: 25px;
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-between; 
+    margin: 20px auto;
+}
+
+#menu div {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 499px) {
+    .is-Transformed { 
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+
+
+    .is-Transformed p {
+        text-align: center;
+        font-family: monospace;
+        font-size: 2.5vw;
+    }
+}
+@media screen and (min-width: 500px) {
+    .is-Transformed { 
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+    
+    
+    .is-Transformed p {
+        text-align: center;
+        font-family: monospace;
+        font-size: .8vw;
+    }
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    .is-Transformed { 
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+    
+    
+    .is-Transformed p {
+        text-align: center;
+        font-family: monospace;
+        font-size: 2vw;
+    }
+  }
+  @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait){
+    .is-Transformed { 
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+    
+    
+    .is-Transformed p {
+        text-align: center;
+        font-family: monospace;
+        font-size: 2vw;
+    }
+  }
+  
+  .collapsible {
+  background-color: #FFF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 1em;
+  font-family: monospace;
+  border-bottom: 1px solid;
+}
+
+.collapsible:after {
+    content: '\002B';
+    float: right;
+    font-size: 1em;
+    margin-left: 1px;
+}
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1em;
+}
