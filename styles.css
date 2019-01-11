@@ -92,6 +92,14 @@ h1 {
     }
   }
   
+.work-Thumbs {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
   .collapsible {
   background-color: #FFF;
   cursor: pointer;
@@ -106,16 +114,13 @@ h1 {
 }
 
 .collapsible img {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
+    max-width: 100%
 }
 
 .collapsible:after {
     content: '\002B';
     float: right;
     font-size: 1em;
-    margin-left: 1px;
 }
 .active:after {
     content: "\2212";
