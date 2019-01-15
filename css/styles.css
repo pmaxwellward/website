@@ -182,8 +182,8 @@ h1 {
     cursor: pointer;
 }
 /*hide slides by default*/
-.mySlides {
-    display: none;
+.currentSlide {
+    max-width:100%;
 }
 /*next/prev buttons*/
 .prev,
