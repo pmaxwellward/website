@@ -1,9 +1,9 @@
 
 //collapsible animation
 var coll = document.getElementsByClassName("collapsible");
-var i;
-const currentSlidez = document.querySelector('.currentSlide');
-const demo = document.querySelectorAll('.demo');
+const currentSlidez = document.querySelector('#currentSlide');
+//const demo = document.querySelectorAll('.demo');
+var illoSlides = [];
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -17,6 +17,18 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+for (i = 0; i < 23; i++) {
+  illoSlides.push(`./images/illo_`+i+`.jpg`);
+}
+
+for (i = 0; i < illoSlides.length; i++) {
+  var picture = document.createElement('img');
+  picture.src = `./images/illo_`+i+`_t.png`;
+  picture.className = "demo";
+  picture.onclick = function () {currentSlide(i)};
+  document.getElementById("thumbnails").appendChild(picture);
+}
+
 //open the thing
 function openModal() {
   document.getElementById('myModal').style.display = "block";
@@ -26,7 +38,7 @@ function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
 
-var slideIndex = 1;
+var slideIndex = 0;;
 showSlides(slideIndex);
 
 //next/forward controls
@@ -40,20 +52,11 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("currentSlide");
-  var captionText = document.getElementById("caption");
+  var slides = document.getElementById("currentSlide");
+  //var captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
-  //for (i = 0; i < slides.length; i++) {
-  //  slides[i].style.display = 'none';
-  //}
-  //for (i = 0; i < demo.length; i++) {
-  //  demo[i].className = demo[i].className.replace(" active", "");
-  //}
-  //slides[slideIndex-1].style.display = "block";
-  //demo[slideIndex-1].className += " active";
-  //captionText.innerHTML = demo[slideIndex-1].alt;
-  currentSlidez.firstElementChild.src = demo[n-1].src;
-  console.log(currentSlidez.firstElementChild.src);
+  slides.firstElementChild.src = illoSlides[n];
+  //currentSlidez.firstElementChild.src = demo[n].src;
+  console.log("end");
 }

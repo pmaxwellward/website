@@ -143,6 +143,7 @@ h1 {
 .column {
     float: left;
     width: 25%;
+    padding: 5px;
 }
 /*The modal bg*/
 .modal {
@@ -164,7 +165,7 @@ h1 {
     margin: auto;
     padding: 0;
     width: 90%;
-    max-width: 1200px;
+    max-width: 700px;
 }
 /*close button*/
 .close {
@@ -182,8 +183,8 @@ h1 {
     cursor: pointer;
 }
 /*hide slides by default*/
-.currentSlide {
-    max-width:100%;
+#currentSlide {
+    width:auto;
 }
 /*next/prev buttons*/
 .prev,
@@ -227,6 +228,9 @@ h1 {
     padding: 2px 16px;
     color: white;
     font-family: monospace;
+}
+#thumbnails {
+    display:inline-block;
 }
 img.demo {
     opacity: 0.6;

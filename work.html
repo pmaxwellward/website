@@ -49,15 +49,15 @@
             to tour, perform, make money, and upgrade or downgrade your life as you see fit.
         </p>
     </div>
-    <img src="images/illos.png" onclick="openModal();currentSlide(1)">
+    <img src="images/illos.png" onclick="openModal();currentSlide(0)" style = "cursor:pointer;">
     <div class="row">
         <div class="column">
         <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
             <div class="modal-content">
             
-            <div class="currentSlide">
-                <img src="./images/AG_eclipse.jpg" style="width:100%">
+            <div id="currentSlide">
+                <img src="./images/illo_0.jpg" style="width:100%" >
                 <div class="numbertext">1/24</div>
             </div>
 
@@ -71,14 +71,7 @@
             </div>
 
             <!--thumbnail image controls-->
-            <div class="column">
-                <img class="demo" src="./images/AG_eclipse.jpg" onclick="currentSlide(1)" alt="eclipse">
-            </div>
-            <div class="column">
-                <img class="demo" src="./images/AG_leon.jpg" onclick="currentSlide(2)" alt="leon">
-            </div>
-            <div class="column">
-                <img class="demo" src="./images/AG_voting0.jpg" onclick="currentSlide(3)" alt="voting0">
+            <div id="thumbnails">
             </div>
         </div>
         </div>
