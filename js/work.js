@@ -4,6 +4,7 @@ var coll = document.getElementsByClassName("collapsible");
 const currentSlidez = document.querySelector('#currentSlide');
 //const demo = document.querySelectorAll('.demo');
 var illoSlides = [];
+var slides = document.getElementById("currentSlide");
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -25,9 +26,19 @@ for (i = 0; i < illoSlides.length; i++) {
   var picture = document.createElement('img');
   picture.src = `./images/illo_`+i+`_t.png`;
   picture.className = "demo";
-  picture.onclick = function () {currentSlide(i)};
   document.getElementById("thumbnails").appendChild(picture);
 }
+var hey;
+const pic = document.querySelectorAll('.thumbnails img');
+setTimeout(function() {
+  hey = Array.from(pic);
+}, 100);
+var i;
+pic.forEach(e => e.addEventListener('click', function() {
+  console.log(hey.indexOf(e));
+  i = hey.indexOf(e);
+  slides.firstElementChild.src = illoSlides[i];
+}))
 
 //open the thing
 function openModal() {
