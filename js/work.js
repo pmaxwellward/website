@@ -2,7 +2,6 @@
 //collapsible animation
 var coll = document.getElementsByClassName("collapsible");
 const currentSlidez = document.querySelector('#currentSlide');
-//const demo = document.querySelectorAll('.demo');
 var illoSlides = [];
 var slides = document.getElementById("currentSlide");
 
@@ -22,22 +21,29 @@ for (i = 0; i < 23; i++) {
   illoSlides.push(`./images/illo_`+i+`.jpg`);
 }
 
+/*for (i = 0; i < illoSlides.length; i++) {
+  var thumbDivs = document.createElement('div');
+  thumbDivs.className = "thumb-column";
+  document.getElementById("thumbnails").appendChild(thumbDivs);
+}*/
+
 for (i = 0; i < illoSlides.length; i++) {
   var picture = document.createElement('img');
   picture.src = `./images/illo_`+i+`_t.png`;
   picture.className = "demo";
+  picture.classList.add("column");
   document.getElementById("thumbnails").appendChild(picture);
 }
-var hey;
+
+var illoThumbs;
 const pic = document.querySelectorAll('.thumbnails img');
 setTimeout(function() {
-  hey = Array.from(pic);
+  illoThumbs = Array.from(pic);
 }, 100);
 var i;
 pic.forEach(e => e.addEventListener('click', function() {
-  console.log(hey.indexOf(e));
-  i = hey.indexOf(e);
-  slides.firstElementChild.src = illoSlides[i];
+  i = illoThumbs.indexOf(e);
+  currentSlide(i);
 }))
 
 //open the thing
@@ -63,11 +69,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var slides = document.getElementById("currentSlide");
   //var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {slideIndex = 0}
+  if (n < 0) {slideIndex = slides.length-1}
   slides.firstElementChild.src = illoSlides[n];
-  //currentSlidez.firstElementChild.src = demo[n].src;
-  console.log("end");
 }
