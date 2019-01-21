@@ -4,7 +4,7 @@ a {
 }
 h1 {
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
     display: -webkit-flex; 
     -webkit-justify-content: center;
     display: flex;
@@ -19,10 +19,6 @@ h1 {
     display: flex;
     justify-content: space-between; 
     margin: 20px auto;
-}
-#menu div {
-    max-width: 100%;
-    height: auto;
 }
 
 @media screen and (max-width: 499px) {
@@ -131,24 +127,10 @@ h1 {
     font-family: monospace;
     font-size: 1em;
 }
-.row > .column {
-    padding: 0 8px;
-}
 .row:after {
     content:"";
     display: table;
     clear: both;
-}
-/*Create four equal columns flatoing next to each other*/
-.column {
-    float: left;
-    width: 25%;
-    padding: 5px;
-}
-.thumb-column {
-    float: left;
-    width: 25%;
-    padding: 5px;
 }
 /*The modal bg*/
 .modal {
@@ -161,12 +143,11 @@ h1 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: black;
+    background-color: rgba(0,0,0,0.9)
 }
 /*modal content*/
 .modal-content {
     position: relative;
-    background-color: #fefefe;
     margin: auto;
     padding: 0;
     width: 90%;
@@ -188,8 +169,30 @@ h1 {
     cursor: pointer;
 }
 /*hide slides by default*/
-#currentSlide {
-    width:auto;
+#currentSlide img {
+    width: auto;
+    max-height: 400px;
+    display: block;
+    margin: auto;
+}
+.thumbnail-slider {
+    width: 700px;
+    overflow: auto;
+}
+.thumbnail-grid {
+    position:relative;
+    white-space: nowrap;
+}
+.thumbnail-container {
+    display:inline-block;
+    margin: 1px;
+    vertical-align: top;
+    width:117px;
+}
+/*Create four equal columns flatoing next to each other*/
+.thumbnails {
+    float: left;
+    width: 117px;
 }
 /*next/prev buttons*/
 .prev,
@@ -233,9 +236,6 @@ h1 {
     padding: 2px 16px;
     color: white;
     font-family: monospace;
-}
-#thumbnails {
-    display:inline-block;
 }
 img.demo {
     opacity: 0.6;
