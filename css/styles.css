@@ -175,7 +175,7 @@ h1 {
     display: block;
     margin: auto;
 }
-.thumbnail-slider {
+#thumbnail-slider {
     width: 700px;
     overflow: auto;
 }
@@ -230,11 +230,11 @@ h1 {
     color: white;
     font-family: monospace;
 }
-img.demo {
+img.thumb-status {
     opacity: 0.6;
 }
 .active,
-.demo:hover {
+.thumb-status:hover {
     opacity: 1;
 }
 img.hover-shadow {
@@ -242,4 +242,22 @@ img.hover-shadow {
 }
 .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background:rgba(170, 170, 170, 0.5); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:rgba(170, 170, 170, 0.75);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:rgb(170, 170, 170)
 }
