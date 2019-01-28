@@ -9,7 +9,7 @@ var captionList = [
 /*1*/"Orleans Parish DA Leon Cannizzaro | ANTIGRAVITY Magazine | 2017",
 /*2*/"No-Nonsense Voter Education Guide NOLA Elections | ANTIGRAVITY Magazine | 2017",
 /*3*/"No-Nonsense Voter Education Guide NOLA Elections | ANTIGRAVITY Magazine | 2017",
-/*4*/"No-Nonsense Voter Education Guide NOLA Elections | ANTIGRAVITY Magazine | 2017",
+/*4*/"No-Nonsense Voter Education Guide NOLA Elections  | ANTIGRAVITY Magazine | 2017",
 /*5*/"Two Steppin' | Sculpture | Show Flyer",
 /*6*/"This Guy's a Grinning | Painting | Show Flyer",
 /*7*/"Children & Children at Heart | Ink | Parade Flyer",
@@ -36,7 +36,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-for (i = 0; i < 18; i++) {
+for (i = 0; i < 26; i++) {
   illoSlides.push(`./images/illo_`+i+`.jpg`);
 }
 
