@@ -173,6 +173,7 @@ h1 {
     max-height: 400px;
     display: block;
     margin: auto;
+    cursor: pointer;
 }
 #thumbnail-slider {
     width: 700px;
@@ -187,6 +188,7 @@ h1 {
     margin: 1px;
     vertical-align: top;
     width:117px;
+    cursor: pointer;
 }
 /*Create four equal columns flatoing next to each other*/
 .thumbnails {
