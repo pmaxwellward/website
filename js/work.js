@@ -23,14 +23,14 @@ var captionList = [
 /*15*/"String Bean String Band | Ink | Personal",
 /*16*/"Old Folks at the Square Dance | Ink | Personal",
 /*17*/"Fais Do Do | Ink | Personal",
-/*18*/"Have & Have Not | Comic | 1/6",
-/*19*/"Have & Have Not | Comic | 2/6",
-/*20*/"Have & Have Not | Comic | 3/6",
-/*21*/"Have & Have Not | Comic | 4/6",
-/*22*/"Have & Have Not | Comic | 5/6",
-/*23*/"Have & Have Not | Comic | 6/6",
-/*24*/"Who's With me? | Comic | Feast (Yer Eyes) Collection",
-/*25*/"Ballad of Bart | Comic | Feast (Yer Eyes) Collection"];
+/*18*/"Have & Have Not 1/6 | Comic",
+/*19*/"Have & Have Not 2/6 | Comic",
+/*20*/"Have & Have Not 3/6 | Comic",
+/*21*/"Have & Have Not 4/6 | Comic",
+/*22*/"Have & Have Not 5/6 | Comic",
+/*23*/"Have & Have Not 6/6 | Comic",
+/*24*/"The Ballad of Bart | Comic"];
+
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -44,7 +44,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-for (i = 0; i < 26; i++) {
+for (i = 0; i < 25; i++) {
   illoSlides.push(`./images/illo_`+i+`.jpg`);
 }
 
