@@ -19,6 +19,16 @@ h1 {
     display: flex;
     justify-content: space-between; 
     margin: 20px auto;
+    padding-bottom: 5px;
+}
+#menu img {
+    max-width: 100%;
+}
+#gif-Man img {
+    display: block;
+    margin: auto;
+    max-width: 90vw;
+    max-height: 80vh;
 }
 
 @media screen and (max-width: 499px) {
