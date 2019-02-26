@@ -22,7 +22,15 @@ var captionList = [
 /*14*/"Do the Zydeco | Ink | Personal",
 /*15*/"String Bean String Band | Ink | Personal",
 /*16*/"Old Folks at the Square Dance | Ink | Personal",
-/*17*/"Fais Do Do | Ink | Personal"];
+/*17*/"Fais Do Do | Ink | Personal",
+/*18*/"Have & Have Not | Comic | 1/6",
+/*19*/"Have & Have Not | Comic | 2/6",
+/*20*/"Have & Have Not | Comic | 3/6",
+/*21*/"Have & Have Not | Comic | 4/6",
+/*22*/"Have & Have Not | Comic | 5/6",
+/*23*/"Have & Have Not | Comic | 6/6",
+/*24*/"Who's With me? | Comic | Feast (Yer Eyes) Collection",
+/*25*/"Ballad of Bart | Comic | Feast (Yer Eyes) Collection"];
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -86,8 +94,73 @@ function showSlides(n) {
   var captionText = document.getElementById("caption");
   if (n >= illoSlides.length) {slideIndex = 0}
   if (n < 0) {slideIndex = illoSlides.length-1}
-  slides.firstElementChild.src = illoSlides[slideIndex];
+  slides.firstElementChild.lastElementChild.src = illoSlides[slideIndex];
+  slides.firstElementChild.lastElementChild.id = "illoSlide"+slideIndex.toString();
   captionText.innerHTML = captionList[slideIndex];
   illoThumbs[slideIndex].setAttribute("class","active");
   document.getElementById("thumbnail-slider").scrollTo((pic[slideIndex].offsetLeft-234),0);
+  magnify(slides.firstElementChild.firstElementChild.id,3);
+  //slides.firstElementChild.firstChildElement.backgroundImage = illoSlides[slideIndex];
+}
+
+function magnify(imgID, zoom) {
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+  img1 = slides.firstElementChild.lastElementChild;
+
+  /* Create magnifier glass: */
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+
+  /* Insert magnifier glass: */
+  img1.parentElement.insertBefore(glass, img1);
+
+  /* Set background properties for the magnifier glass: */
+  slides.firstElementChild.firstElementChild.style.backgroundImage = "url('" + img1.src + "')";
+  slides.firstElementChild.firstElementChild.style.backgroundRepeat = "no-repeat";
+  slides.firstElementChild.firstElementChild.style.backgroundSize = (img1.width * zoom) + "px " + (img1.height * zoom) + "px";
+  bw = 3;
+  w = slides.firstElementChild.firstElementChild.offsetWidth / 2;
+  h = slides.firstElementChild.firstElementChild.offsetHeight / 2;
+
+  /* Execute a function when someone moves the magnifier glass over the image: */
+  slides.firstElementChild.firstElementChild.addEventListener("mousemove", moveMagnifier);
+  img1.addEventListener("mousemove", moveMagnifier);
+
+  /*and also for touch screens:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img1.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /* Prevent any other actions that may occur when moving over the image */
+    e.preventDefault();
+    /* Get the cursor's x and y positions: */
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /* Prevent the magnifier glass from being positioned outside the image: */
+    if (x > img1.width - (w / zoom)) {x = img1.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img1.height - (h / zoom)) {y = img1.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /* Set the position of the magnifier glass: */
+    slides.firstElementChild.firstElementChild.style.left = (x - w) + "px";
+    slides.firstElementChild.firstElementChild.style.top = (y - h) + "px";
+    /* Display what the magnifier glass "sees": */
+    slides.firstElementChild.firstElementChild.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /* Get the x and y positions of the image: */
+    a = img1.getBoundingClientRect();
+    /* Calculate the cursor's x and y coordinates, relative to the image: */
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /* Consider any page scrolling: */
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
 }
