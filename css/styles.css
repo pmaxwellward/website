@@ -24,7 +24,7 @@ h1 {
 #menu img {
     max-width: 100%;
 }
-#gif-Man img {
+.gif-Man img {
     display: block;
     margin: auto;
     max-width: 90vw;
