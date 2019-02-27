@@ -23,16 +23,53 @@ const man_19 = {name: "GIFs/19.gif", length: 833.333};
 const man_20 = {name: "GIFs/20.gif", length: 1875};
 const man_21 = {name: "GIFs/21.gif", length: 333.333};
 
+const intro = [man_01,man_02,man_03,man_04,man_05,man_06];
+
+var i = 0;
 var firstPress = false;
 var speechTestLength = 5000;
+//load man_x.name
+//setTimeout(loadScene, man_x, man_x+1)
+//load man_x+1.name, x++
+//setTime(loadScene, man_x, man_x+1)
 
-function loadScene(name) {
-    gifMan.src = name;
+function playScene() {
+    var internalCallback = function() {
+        return function() {
+            if(i > intro.length) {
+                setTimeout(internalCallback, intro[i].lengthlength);
+                loadScene();
+            }
+        }
+    }
+    setTimeout(internalCallback, intro[i].length);
 }
 
-setTimeout(loadScene, man_00.length, man_s1.name);
-setTimeout(loadScene, man_s1.length, man_20.name);
-setTimeout(loadScene, speechTestLength, man_21.name);
-setTimeout(loadScene, man_21.length, man_00.name);
+playScene();
+//function setDeceleratingTimeout(loadScene, factor, times) {
+//    var internalCallback = function(t, counter) {
+//        return function() {
+//            if (t-- > 0) {
+//                window.setTimeout(internalCallback, ++counter * factor);
+//                loadScene();
+//            }
+//        }
+//    }(times, 0);
+//
+//    window.setTimeout(internalCallback, factor);
+//}
+//setDeceleratingTimeout(function() {
+//    console.log('hi');
+//}, 10, 10);
+
+function loadScene() {
+    gifMan.src = intro[i+1].name;
+    i++;
+}
+
+//setTimeout(loadScene, man_00.length, man_s1.name);
+//setTimeout(loadScene, man_s1.length, man_20.name);
+//setTimeout(loadScene, speechTestLength, man_21.name);
+//setTimeout(loadScene, man_21.length, man_00.name);
 
 
