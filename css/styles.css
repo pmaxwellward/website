@@ -24,11 +24,13 @@ h1 {
 #menu img {
     max-width: 100%;
 }
-.gif-Man video {
+.gif-Man img {
     display: block;
     margin: auto;
     max-width: 90vw;
     max-height: 80vh;
+    /*background-image: url("../images/21.jpg");
+    background-size: contain;*/
 }
 
 /*.gif-Man {

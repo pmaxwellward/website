@@ -1,66 +1,67 @@
-const gifMan = document.querySelector(".gif-Man video");
-const man_00 = {name: "GIFs/00.gif", length: 1041.666, play: function(){gifMan.src=this.name;}};
-const man_01 = {name: "GIFs/01.gif", length: 1375, play: function(){gifMan.src=this.name;}};
-const man_s1 = {name: "GIFs/01.gif", length: 458.333, play: function(){gifMan.src=this.name;}};
-const man_02 = {name: "GIFs/02.gif", length: 875, play: function(){gifMan.src=this.name;}};
-const man_03 = {name: "GIFs/03.gif", length: 1750, play: function(){gifMan.src=this.name;}};
-const man_04 = {name: "GIFs/04.gif", length: 458.333, play: function(){gifMan.src=this.name;}};
-const man_05 = {name: "GIFs/05.gif", length: 250, play: function(){gifMan.src=this.name;}};
-const man_06 = {name: "GIFs/06.gif", length: 416.666, play: function(){gifMan.src=this.name;}};
-const man_07 = {name: "GIFs/07.gif", length: 250};
-const man_08 = {name: "GIFs/08.gif", length: 500};
-const man_09 = {name: "GIFs/09.gif", length: 625};
-const fly_10 = {name: "GIFs/10.gif", length: 1333.333};
-const fly_11 = {name: "GIFs/11.gif", length: 1166.666};
-const fly_12 = {name: "GIFs/12.gif", length: 1125};
-const fly_13 = {name: "GIFs/13.gif", length: 1333.333};
-const fly_14 = {name: "GIFs/14.gif", length: 1166.666};
-const fly_15 = {name: "GIFs/15.gif", length: 1125};
-const man_16 = {name: "GIFs/16.gif", length: 1666.666};
-const man_17 = {name: "GIFs/17.gif", length: 1166.666};
-const man_18 = {name: "GIFs/18.gif", length: 166.666};
-const man_19 = {name: "GIFs/19.gif", length: 833.333};
-const man_20 = {name: "GIFs/20.gif", length: 1875};
-const man_21 = {name: "GIFs/21.gif", length: 333.333};
+const gifMan = document.querySelector(".gif-Man img");
+const man_00 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/00.gif", length: 1041.666};
+const man_01 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/01.gif", length: 1375};
+const man_s1 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/01.gif", length: 458.333};
+const man_02 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/02.gif", length: 875};
+const man_03 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/03.gif", length: 1750};
+const man_04 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/04.gif", length: 458.333};
+const man_05 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/05.gif", length: 250};
+const man_06 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/06.gif", length: 416.666};
+const man_07 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/07.gif", length: 250};
+const man_08 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/08.gif", length: 500};
+const man_09 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/09.gif", length: 625};
+const fly_10 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/10.gif", length: 1333.333};
+const fly_11 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/11.gif", length: 1166.666};
+const fly_12 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/12.gif", length: 1125};
+const fly_13 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/13.gif", length: 1333.333};
+const fly_14 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/14.gif", length: 1166.666};
+const fly_15 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/15.gif", length: 1125};
+const man_16 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/16.gif", length: 1666.666};
+const man_17 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/17.gif", length: 1166.666};
+const man_18 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/18.gif", length: 166.666};
+const man_19 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/19.gif", length: 833.333};
+const man_20 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/20.gif", length: 1875};
+const man_21 = {name: "file:///C:/Users/Graphics/Documents/website/GIFs/21.gif", length: 333.333};
 
 const intro = [man_01,man_02,man_03,man_04,man_05,man_06];
 
-function loadScene() {
-    if(gifMan.src == "file:///D:/Website/directory/videos/20.webm"){
-        gifMan.src = "./videos/21.webm";
-        gifMan.load();
-    }
-    else if(gifMan.src == "./videos/21.webm") {
-        gifMan.src = "./videos/20.webm";
-        gifMan.load();
+function playScene() {
+    switch(gifMan.src) {
+        case man_00.name:
+            loadScene(man_01);
+            break;
+        case man_01.name:
+            loadScene(man_02);
+            break;
+        case man_02.name:
+            loadScene(man_03);
+            break;
+        case man_03.name:
+            loadScene(man_04);
+            break;
+        case man_04.name:
+            loadScene(man_05);
+            break;
+        case man_05.name:
+            loadScene(man_06);
+            break;
+        case man_06.name:
+            loadScene(man_07);
+            break;
+        case man_07.name:
+            loadScene(man_00);
+            break;
+        default:
+            console.log("error");
     }
 }
 
-var i = 0;
-var time;
-var firstPress = false;
-var speechTestLength = 5000;
-//load man_x.name
-//setTimeout(loadScene, man_x, man_x+1)
-//load man_x+1.name, x++
-//setTime(loadScene, man_x, man_x+1)
+function loadScene(scene) {
+    gifMan.src = scene.name;
+    setTimeout(playScene, scene.length);
+}
 
-//function setDeceleratingTimeout(loadScene, times) {
-//    var internalCallback = function(t, counter) {
-//        return function() {
-//            if (i < t) {
-//                window.setTimeout(internalCallback, intro[i].length);
-//                loadScene();
-//            }
-//        }
-//    }(times, 0);
-//
-//    window.setTimeout(internalCallback);
-//}
-//setDeceleratingTimeout(function() {
-//    intro[i].play();
-//    i++;
-//}, intro.length);
+setTimeout(playScene, man_00.length);
 
 
 
