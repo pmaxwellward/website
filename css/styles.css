@@ -24,25 +24,20 @@ h1 {
 #menu img {
     max-width: 100%;
 }
-.gif-Man img {
+.gif-Man img,
+.hidden-GIFs img {
     display: block;
     margin: auto;
     max-width: 90vw;
     max-height: 80vh;
-    /*background-image: url("../images/21.jpg");
-    background-size: contain;*/
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
-/*.gif-Man {
-    background-image: url(spritesheets/20.png);
-    width: 1080px;
-    height: 1600px;
-    animation: lip-sync-idle .041666s steps(45) infinite;
+.hidden-GIFs img {
+    visibility: hidden;
 }
-@keyframes lip-sync-idle {
-    from { background-position: 0px; }
-    to { background-position: -48600px; }
-}*/
 
 @media screen and (max-width: 499px) {
     .is-Transformed { 
