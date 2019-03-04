@@ -25,7 +25,7 @@ h1 {
     max-width: 100%;
 }
 .gif-Man img,
-.hidden-GIFs img {
+.text-Box img {
     display: block;
     margin: auto;
     max-width: 90vw;
@@ -35,10 +35,11 @@ h1 {
     right: 0;
 }
 
-.hidden-GIFs img {
-    visibility: hidden;
+.text-Box img {
+    z-index: 1;
+    transform-origin: center;
+    transform: scale(0.6) translate(25px,-45px);
 }
-
 @media screen and (max-width: 499px) {
     .is-Transformed { 
         margin: 0;
