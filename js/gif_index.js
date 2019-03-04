@@ -132,28 +132,28 @@ pushIntro(
     "GIFs/intro_04b.gif"  
 )
 
-const man_00 = {name: manGIFs[0].src, length: 625};
-const man_01 = {name: manGIFs[1].src, length: 1375};
-const man_02 = {name: manGIFs[2].src, length: 875};
-const man_03 = {name: manGIFs[3].src, length: 1750};
-const man_04 = {name: manGIFs[4].src, length: 458.333};
-const man_05 = {name: manGIFs[5].src, length: 250};
-const man_06 = {name: manGIFs[6].src, length: 416.666};
-const man_07 = {name: manGIFs[7].src, length: 250};
-const man_08 = {name: manGIFs[8].src, length: 500};
-const man_09 = {name: manGIFs[9].src, length: 625};
-const fly_10 = {name: manGIFs[10].src, length: 1333.333};
-const fly_11 = {name: manGIFs[11].src, length: 1166.666};
-const fly_12 = {name: manGIFs[12].src, length: 1125};
-const fly_13 = {name: manGIFs[13].src, length: 1333.333};
-const fly_14 = {name: manGIFs[14].src, length: 1166.666};
-const fly_15 = {name: manGIFs[15].src, length: 1125};
-const man_16 = {name: manGIFs[16].src, length: 1666.666};
-const man_17 = {name: manGIFs[17].src, length: 1166.666};
-const man_18 = {name: manGIFs[18].src, length: 166.666};
-const man_19 = {name: manGIFs[19].src, length: 833.333};
-const man_20 = {name: manGIFs[20].src, length: 1875};
-const man_21 = {name: manGIFs[21].src, length: 333.333};
+const man_00 = {name: manGIFs[0].src, length: 625};         //idle 
+const man_01 = {name: manGIFs[1].src, length: 1375};        //idle_in
+const man_02 = {name: manGIFs[2].src, length: 875};         //idle_headIn        
+const man_03 = {name: manGIFs[3].src, length: 1750};        //idle_head
+const man_04 = {name: manGIFs[4].src, length: 458.333};     //idle_headOut
+const man_05 = {name: manGIFs[5].src, length: 250};         //headScratch_in
+const man_06 = {name: manGIFs[6].src, length: 416.666};     //headScratch
+const man_07 = {name: manGIFs[7].src, length: 250};         //headScratch_out
+const man_08 = {name: manGIFs[8].src, length: 500};         //fly
+const man_09 = {name: manGIFs[9].src, length: 625};         //fly_in
+const fly_10 = {name: manGIFs[10].src, length: 1333.333};   //fly_1
+const fly_11 = {name: manGIFs[11].src, length: 1166.666};   //fly_2
+const fly_12 = {name: manGIFs[12].src, length: 1125};       //fly_3
+const fly_13 = {name: manGIFs[13].src, length: 1333.333};   //fly_4
+const fly_14 = {name: manGIFs[14].src, length: 1166.666};   //fly_5
+const fly_15 = {name: manGIFs[15].src, length: 1125};       //fly_6
+const man_16 = {name: manGIFs[16].src, length: 1666.666};   //fly_out
+const man_17 = {name: manGIFs[17].src, length: 1166.666};   //lipSync_in
+const man_18 = {name: manGIFs[18].src, length: 166.666};    //lipSync_out
+const man_19 = {name: manGIFs[19].src, length: 833.333};    //lipSyncIdle_in
+const man_20 = {name: manGIFs[20].src, length: 1875};       //lipSynceIdle
+const man_21 = {name: manGIFs[21].src, length: 333.333};    //lipSyncIdle_out
 
 const anger_00 = angerGIFs[0].src;
 const anger_01 = angerGIFs[1].src;
@@ -209,7 +209,12 @@ var idleLoop;
 var idleCycle;
 var idleState;
 var loading;
+var loadingText;
 var flyIndex = 0;
+var angerIndex = 0;
+var blurbIndex = 0;
+var subIndex = 0;
+var textLength = 3500;
 var buttonOn = false;
 var firstPress = false;
 var range = [3,4,5];
@@ -447,14 +452,16 @@ function playScene() {
             break;
 
         case man_19.name:
-            if(firstPress == false) {
-                firstPress = true;
-            }
             loadScene(man_20);
             break;
 
         case man_20.name:
-            loadScene(man_21);
+            if(firstPress == false) {
+                loadText(first[0]);
+                firstPress = true;
+            } else {
+                loadText(blurb);
+            }
             break;
 
         case man_21.name:
@@ -493,6 +500,30 @@ function shuffle(a) {
 	}
 	return a;
 }
+function loadText(scene) {
+    if(scene == first) {
+        textBox.src = scene[0];
+        loadingText = setTimeout(playText,textLength,intro[0]);
+    }
+}
 
+function playText(scene) {
+    switch(scene) {
+        
+        case intro[0]:
+            if(Array.isArray(intro[0])) {
+                if(subIndex < intro[0].length) {
+                    loadText(intro[0][subIndex]);
+                    subIndex++;
+                } else {
+                    subIndex = 0;
+                }
+            } else {
+                loadText(intro[0]);
+            }
+            break;
 
+        
+    }
+}
 
