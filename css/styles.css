@@ -1,3 +1,13 @@
+html{
+    -webkit-tap-highlight-color: transparent;
+
+}
+body {
+    min-height: calc(100vh - 8px);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
 h1 img {
     max-width: 75%;
     max-height: 100%;
@@ -32,12 +42,12 @@ h1 img {
 .gif-Man img {
     cursor: pointer;
 }
+.text-Box img {
+    z-index: 1;
+    /*transform-origin: center;*/
+    visibility: hidden;
+}
 @media screen and (max-width: 499px) {
-    .text-Box img {
-        z-index: 1;
-        transform-origin: center;
-        visibility: hidden;
-    }
     .is-Transformed { 
         margin: 0;
         position: absolute;
@@ -52,12 +62,6 @@ h1 img {
     }
 }
 @media screen and (min-width: 500px) {
-    .text-Box img {
-        z-index: 1;
-        transform-origin: center;
-        transform: scale(0.6) translate(25px,-45px);
-        visibility: hidden;
-    }
     .is-Transformed { 
         margin: 0;
         position: absolute;
@@ -282,17 +286,3 @@ img.hover-shadow {
 }
 
 * {box-sizing: border-box;}
-
-#img-magnifier-container {
-  position: relative;
-}
-
-.img-magnifier-glass {
-  position: absolute;
-  border: 3px solid #000;
-  border-radius: 50%;
-  cursor: none;
-  /*Set the size of the magnifier glass:*/
-  width: 100px;
-  height: 100px;
-}
