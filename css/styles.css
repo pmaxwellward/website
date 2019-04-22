@@ -191,6 +191,7 @@ h1 img {
 }
 /*hide slides by default*/
 #currentSlide img {
+    width: 90vw;
     max-width: 600px;
     max-height: 400px;
     display: block;
@@ -198,7 +199,8 @@ h1 img {
     cursor: pointer;
 }
 #thumbnail-slider {
-    width: 700px;
+    width: 90vw;
+    max-width: 700px;
     overflow: auto;
 }
 .thumbnail-grid {
