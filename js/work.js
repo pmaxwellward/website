@@ -99,3 +99,5 @@ function showSlides(n) {
   illoThumbs[slideIndex].setAttribute("class","active");
   document.getElementById("thumbnail-slider").scrollTo((pic[slideIndex].offsetLeft-234),0);
 }
+
+

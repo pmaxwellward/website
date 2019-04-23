@@ -3,134 +3,203 @@ var angerGIFs = [];
 var blurbGIFs = [];
 var firstGIFs = [];
 var introGIFs = [];
+var maxW = window.matchMedia("(max-width:499px)");
+var minW = window.matchMedia("(min-width:500px)");
 
-function prefetch() {
-    for (var i = 0; i < arguments.length; i++) {
-        manGIFs[i] = new Image();
-        manGIFs[i].src = prefetch.arguments[i];
-    }
+if(maxW.matches) {
+    pushMan(
+        "mGIFs/00.gif",
+        "mGIFs/01.gif",
+        "mGIFs/02.gif",
+        "mGIFs/03.gif",
+        "mGIFs/04.gif",
+        "mGIFs/05.gif",
+        "mGIFs/06.gif",
+        "mGIFs/07.gif",
+        "mGIFs/08.gif",
+        "mGIFs/09.gif",
+        "mGIFs/10.gif",
+        "mGIFs/11.gif",
+        "mGIFs/12.gif",
+        "mGIFs/13.gif",
+        "mGIFs/14.gif",
+        "mGIFs/15.gif",
+        "mGIFs/16.gif",
+        "mGIFs/17.gif",
+        "mGIFs/18.gif",
+        "mGIFs/19.gif",
+        "mGIFs/20.gif",
+        "mGIFs/21.gif"
+    )
+    pushAnger(
+        "mGIFs/anger_00.gif",
+        "mGIFs/anger_01.gif",
+        "mGIFs/anger_02.gif",
+        "mGIFs/anger_03.gif",
+        "mGIFs/anger_04.gif",
+        "mGIFs/anger_05.gif",
+        "mGIFs/anger_06.gif",
+        "mGIFs/anger_07.gif",
+        "mGIFs/anger_08.gif",
+        "mGIFs/anger_09a.gif",
+        "mGIFs/anger_09b.gif",
+        "mGIFs/anger_10.gif",
+        "mGIFs/anger_11.gif",
+        "mGIFs/anger_12.gif",
+        "mGIFs/anger_13.gif",
+        "mGIFs/anger_14.gif",
+        "mGIFs/anger_15.gif"
+    )
+    pushBlurb(
+        "mGIFs/blurb_00a.gif",
+        "mGIFs/blurb_00b.gif",
+        "mGIFs/blurb_01a.gif",
+        "mGIFs/blurb_01b.gif",
+        "mGIFs/blurb_02a.gif",
+        "mGIFs/blurb_02b.gif",
+        "mGIFs/blurb_03a.gif",
+        "mGIFs/blurb_03b.gif",
+        "mGIFs/blurb_04.gif",
+        "mGIFs/blurb_05a.gif",
+        "mGIFs/blurb_05b.gif",
+        "mGIFs/blurb_05c.gif",
+        "mGIFs/blurb_06a.gif",
+        "mGIFs/blurb_06b.gif",
+        "mGIFs/blurb_07.gif",
+        "mGIFs/blurb_08a.gif",
+        "mGIFs/blurb_08b.gif",
+        "mGIFs/blurb_09.gif",
+        "mGIFs/blurb_10a.gif",
+        "mGIFs/blurb_10b.gif",
+        "mGIFs/blurb_11.gif",
+        "mGIFs/blurb_12a.gif",
+        "mGIFs/blurb_12b.gif",
+        "mGIFs/blurb_13a.gif",
+        "mGIFs/blurb_13b.gif",
+        "mGIFs/blurb_14a.gif",
+        "mGIFs/blurb_14b.gif",
+        "mGIFs/blurb_15.gif",
+        "mGIFs/blurb_16a.gif",
+        "mGIFs/blurb_16b.gif",
+        "mGIFs/blurb_17a.gif",
+        "mGIFs/blurb_17b.gif",
+        "mGIFs/blurb_17c.gif"
+    )
+    pushFirst(
+        "mGIFs/first_00.gif",
+        "mGIFs/first_01.gif",
+        "mGIFs/first_02.gif",
+        "mGIFs/first_03.gif"
+    )
+    pushIntro(
+        "mGIFs/intro_00a.gif",
+        "mGIFs/intro_00b.gif",
+        "mGIFs/intro_01a.gif",
+        "mGIFs/intro_01b.gif",
+        "mGIFs/intro_02.gif",
+        "mGIFs/intro_03a.gif",
+        "mGIFs/intro_03b.gif",
+        "mGIFs/intro_04a.gif",
+        "mGIFs/intro_04b.gif"  
+    )
 }
-
-prefetch(
-    "GIFs/00.gif",
-    "GIFs/01.gif",
-    "GIFs/02.gif",
-    "GIFs/03.gif",
-    "GIFs/04.gif",
-    "GIFs/05.gif",
-    "GIFs/06.gif",
-    "GIFs/07.gif",
-    "GIFs/08.gif",
-    "GIFs/09.gif",
-    "GIFs/10.gif",
-    "GIFs/11.gif",
-    "GIFs/12.gif",
-    "GIFs/13.gif",
-    "GIFs/14.gif",
-    "GIFs/15.gif",
-    "GIFs/16.gif",
-    "GIFs/17.gif",
-    "GIFs/18.gif",
-    "GIFs/19.gif",
-    "GIFs/20.gif",
-    "GIFs/21.gif"
-)
-
-function pushAnger() {
-    for (var i = 0; i < arguments.length; i++) {
-        angerGIFs[i] = new Image();
-        angerGIFs[i].src = pushAnger.arguments[i];
-    }
+if(minW.matches) {
+    pushMan(
+        "GIFs/00.gif",
+        "GIFs/01.gif",
+        "GIFs/02.gif",
+        "GIFs/03.gif",
+        "GIFs/04.gif",
+        "GIFs/05.gif",
+        "GIFs/06.gif",
+        "GIFs/07.gif",
+        "GIFs/08.gif",
+        "GIFs/09.gif",
+        "GIFs/10.gif",
+        "GIFs/11.gif",
+        "GIFs/12.gif",
+        "GIFs/13.gif",
+        "GIFs/14.gif",
+        "GIFs/15.gif",
+        "GIFs/16.gif",
+        "GIFs/17.gif",
+        "GIFs/18.gif",
+        "GIFs/19.gif",
+        "GIFs/20.gif",
+        "GIFs/21.gif"
+    )
+    pushAnger(
+        "GIFs/anger_00.gif",
+        "GIFs/anger_01.gif",
+        "GIFs/anger_02.gif",
+        "GIFs/anger_03.gif",
+        "GIFs/anger_04.gif",
+        "GIFs/anger_05.gif",
+        "GIFs/anger_06.gif",
+        "GIFs/anger_07.gif",
+        "GIFs/anger_08.gif",
+        "GIFs/anger_09a.gif",
+        "GIFs/anger_09b.gif",
+        "GIFs/anger_10.gif",
+        "GIFs/anger_11.gif",
+        "GIFs/anger_12.gif",
+        "GIFs/anger_13.gif",
+        "GIFs/anger_14.gif",
+        "GIFs/anger_15.gif"
+    )
+    pushBlurb(
+        "GIFs/blurb_00a.gif",
+        "GIFs/blurb_00b.gif",
+        "GIFs/blurb_01a.gif",
+        "GIFs/blurb_01b.gif",
+        "GIFs/blurb_02a.gif",
+        "GIFs/blurb_02b.gif",
+        "GIFs/blurb_03a.gif",
+        "GIFs/blurb_03b.gif",
+        "GIFs/blurb_04.gif",
+        "GIFs/blurb_05a.gif",
+        "GIFs/blurb_05b.gif",
+        "GIFs/blurb_05c.gif",
+        "GIFs/blurb_06a.gif",
+        "GIFs/blurb_06b.gif",
+        "GIFs/blurb_07.gif",
+        "GIFs/blurb_08a.gif",
+        "GIFs/blurb_08b.gif",
+        "GIFs/blurb_09.gif",
+        "GIFs/blurb_10a.gif",
+        "GIFs/blurb_10b.gif",
+        "GIFs/blurb_11.gif",
+        "GIFs/blurb_12a.gif",
+        "GIFs/blurb_12b.gif",
+        "GIFs/blurb_13a.gif",
+        "GIFs/blurb_13b.gif",
+        "GIFs/blurb_14a.gif",
+        "GIFs/blurb_14b.gif",
+        "GIFs/blurb_15.gif",
+        "GIFs/blurb_16a.gif",
+        "GIFs/blurb_16b.gif",
+        "GIFs/blurb_17a.gif",
+        "GIFs/blurb_17b.gif",
+        "GIFs/blurb_17c.gif"
+    )
+    pushFirst(
+        "GIFs/first_00.gif",
+        "GIFs/first_01.gif",
+        "GIFs/first_02.gif",
+        "GIFs/first_03.gif"
+    )
+    pushIntro(
+        "GIFs/intro_00a.gif",
+        "GIFs/intro_00b.gif",
+        "GIFs/intro_01a.gif",
+        "GIFs/intro_01b.gif",
+        "GIFs/intro_02.gif",
+        "GIFs/intro_03a.gif",
+        "GIFs/intro_03b.gif",
+        "GIFs/intro_04a.gif",
+        "GIFs/intro_04b.gif"  
+    )
 }
-function pushBlurb() {
-    for (var i = 0; i < arguments.length; i++) {
-        blurbGIFs[i] = new Image();
-        blurbGIFs[i].src = pushBlurb.arguments[i];
-    }
-}
-function pushFirst() {
-    for (var i = 0; i < arguments.length; i++) {
-        firstGIFs[i] = new Image();
-        firstGIFs[i].src = pushFirst.arguments[i];
-    }
-}
-function pushIntro() {
-    for (var i = 0; i < arguments.length; i++) {
-        introGIFs[i] = new Image();
-        introGIFs[i].src = pushIntro.arguments[i];
-    }
-}
-pushAnger(
-    "GIFs/anger_00.gif",
-    "GIFs/anger_01.gif",
-    "GIFs/anger_02.gif",
-    "GIFs/anger_03.gif",
-    "GIFs/anger_04.gif",
-    "GIFs/anger_05.gif",
-    "GIFs/anger_06.gif",
-    "GIFs/anger_07.gif",
-    "GIFs/anger_08.gif",
-    "GIFs/anger_09a.gif",
-    "GIFs/anger_09b.gif",
-    "GIFs/anger_10.gif",
-    "GIFs/anger_11.gif",
-    "GIFs/anger_12.gif",
-    "GIFs/anger_13.gif",
-    "GIFs/anger_14.gif",
-    "GIFs/anger_15.gif"
-)
-pushBlurb(
-    "GIFs/blurb_00a.gif",
-    "GIFs/blurb_00b.gif",
-    "GIFs/blurb_01a.gif",
-    "GIFs/blurb_01b.gif",
-    "GIFs/blurb_02a.gif",
-    "GIFs/blurb_02b.gif",
-    "GIFs/blurb_03a.gif",
-    "GIFs/blurb_03b.gif",
-    "GIFs/blurb_04.gif",
-    "GIFs/blurb_05a.gif",
-    "GIFs/blurb_05b.gif",
-    "GIFs/blurb_05c.gif",
-    "GIFs/blurb_06a.gif",
-    "GIFs/blurb_06b.gif",
-    "GIFs/blurb_07.gif",
-    "GIFs/blurb_08a.gif",
-    "GIFs/blurb_08b.gif",
-    "GIFs/blurb_09.gif",
-    "GIFs/blurb_10a.gif",
-    "GIFs/blurb_10b.gif",
-    "GIFs/blurb_11.gif",
-    "GIFs/blurb_12a.gif",
-    "GIFs/blurb_12b.gif",
-    "GIFs/blurb_13a.gif",
-    "GIFs/blurb_13b.gif",
-    "GIFs/blurb_14a.gif",
-    "GIFs/blurb_14b.gif",
-    "GIFs/blurb_15.gif",
-    "GIFs/blurb_16a.gif",
-    "GIFs/blurb_16b.gif",
-    "GIFs/blurb_17a.gif",
-    "GIFs/blurb_17b.gif",
-    "GIFs/blurb_17c.gif"
-)
-pushFirst(
-    "GIFs/first_00.gif",
-    "GIFs/first_01.gif",
-    "GIFs/first_02.gif",
-    "GIFs/first_03.gif"
-)
-pushIntro(
-    "GIFs/intro_00a.gif",
-    "GIFs/intro_00b.gif",
-    "GIFs/intro_01a.gif",
-    "GIFs/intro_01b.gif",
-    "GIFs/intro_02.gif",
-    "GIFs/intro_03a.gif",
-    "GIFs/intro_03b.gif",
-    "GIFs/intro_04a.gif",
-    "GIFs/intro_04b.gif"  
-)
 
 const man_00 = {name: manGIFs[0].src, length: 625};         //idle 
 const man_01 = {name: manGIFs[1].src, length: 1375};        //idle_in
@@ -204,6 +273,8 @@ const intro_04 = [introGIFs[7].src,introGIFs[8].src];
 
 const gifMan = document.querySelector(".gif-Man img");
 const textBox = document.querySelector(".text-Box img");
+
+gifMan.src = man_00.name;
 
 var idleLoop;
 var idleCycle;
@@ -284,6 +355,43 @@ shuffle(blurb);
 shuffle(first);
 shuffle(intro);
 
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function(){
+        textBox.src = first[0];
+        setTimeout(playScene, man_00.length);
+       }, 1000);
+ }, false);
+
+function pushMan() {
+    for (var i = 0; i < arguments.length; i++) {
+        manGIFs[i] = new Image();
+        manGIFs[i].src = pushMan.arguments[i];
+    }
+}
+function pushAnger() {
+    for (var i = 0; i < arguments.length; i++) {
+        angerGIFs[i] = new Image();
+        angerGIFs[i].src = pushAnger.arguments[i];
+    }
+}
+function pushBlurb() {
+    for (var i = 0; i < arguments.length; i++) {
+        blurbGIFs[i] = new Image();
+        blurbGIFs[i].src = pushBlurb.arguments[i];
+    }
+}
+function pushFirst() {
+    for (var i = 0; i < arguments.length; i++) {
+        firstGIFs[i] = new Image();
+        firstGIFs[i].src = pushFirst.arguments[i];
+    }
+}
+function pushIntro() {
+    for (var i = 0; i < arguments.length; i++) {
+        introGIFs[i] = new Image();
+        introGIFs[i].src = pushIntro.arguments[i];
+    }
+}
 function playScene() {
     switch(gifMan.src) {
         
@@ -486,14 +594,6 @@ function loadScene(scene) {
     gifMan.src = scene.name;
     loading = setTimeout(playScene, scene.length);
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function(){
-        textBox.src = first[0];
-        setTimeout(playScene, man_00.length);
-       }, 1000);
- }, false);
-
 
 function poke() {
     if (buttonOn == false) {
