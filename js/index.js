@@ -487,8 +487,13 @@ function loadScene(scene) {
     loading = setTimeout(playScene, scene.length);
 }
 
-textBox.src = first[0];
-setTimeout(playScene, man_00.length);
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function(){
+        textBox.src = first[0];
+        setTimeout(playScene, man_00.length);
+       }, 1000);
+ }, false);
+
 
 function poke() {
     if (buttonOn == false) {
