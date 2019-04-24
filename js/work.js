@@ -5,16 +5,16 @@ var slides = document.getElementById("currentSlide");
 var thumbs = document.getElementsByClassName("thumbnails");
 var illoSlides = [];
 var captionList = [
-/*0*/"Operation Moon Shadow | ANTIGRAVITY Magazine | 2017",
-/*1*/"Orleans Parish DA Leon Cannizzaro | ANTIGRAVITY Magazine | 2017",
-/*2*/"No-Nonsense Voter Education Guide NOLA Elections | ANTIGRAVITY Magazine | 2017",
-/*3*/"No-Nonsense Voter Education Guide NOLA Elections | ANTIGRAVITY Magazine | 2017",
-/*4*/"No-Nonsense Voter Education Guide NOLA Elections  | ANTIGRAVITY Magazine | 2017",
+/*0*/"Eclipse | ANTIGRAVITY Magazine | 2017",
+/*1*/"Orleans Parish DA | ANTIGRAVITY Magazine | 2017",
+/*2*/"Voter Guide NOLA | ANTIGRAVITY Magazine | 2017",
+/*3*/"Voter Guide NOLA | ANTIGRAVITY Magazine | 2017",
+/*4*/"Voter Guide NOLA | ANTIGRAVITY Magazine | 2017",
 /*5*/"Two Steppin' | Sculpture | Show Flyer",
 /*6*/"This Guy's a Grinning | Painting | Show Flyer",
-/*7*/"Children & Children at Heart | Ink | Parade Flyer",
+/*7*/"Parade Flyer | Ink | Parade Flyer",
 /*8*/"Busker Trash | Ink | Show Flyer",
-/*9*/"Mountain of a Musician | Ink | Show Flyer",
+/*9*/"Pedal Steel | Ink | Show Flyer",
 /*10*/"Portrait | Sen. Bill Caissdy",
 /*11*/"Portrait | Sen. Pat Toomey",
 /*12*/"Old Man | Ink | Personal",
