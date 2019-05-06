@@ -3,6 +3,7 @@
 var coll = document.getElementsByClassName("collapsible");
 var slides = document.getElementById("currentSlide");
 var thumbs = document.getElementsByClassName("thumbnails");
+var N = slides.children.length;
 var illoSlides = [];
 var captionList = [
 /*0*/"Eclipse | ANTIGRAVITY Magazine | 2017",
@@ -31,6 +32,36 @@ var captionList = [
 /*23*/"Have & Have Not 6/6 | Comic",
 /*24*/"The Ballad of Bart | Comic"];
 
+slides.style.setProperty('--n',N);
+let x0 = null;
+function lock(e) { x0 = unify(e).clientX };
+let slideIndex = 0;
+function move(e) {
+  if(x0 || x0 === 0) {
+    let dx = unify(e).clientX - x0, s = Math.sign(dx);
+  
+    if((slideIndex > 0 || s < 0) && (slideIndex < N - 1 || s > 0))
+      slides.style.setProperty('--i', slideIndex -= s);
+      showSlides(slideIndex);
+    x0 = null
+  }
+};
+
+function unify(e) { return e.changedTouches ? e.changedTouches[0] : e };
+function drag(e) {
+  e.preventDefault() 
+
+  if(x0 || x0 === 0)  
+    slides.style.setProperty('--tx', `${Math.round(unify(e).clientX - x0)}px`)  
+};
+
+slides.addEventListener('mousemove', drag, false);
+slides.addEventListener('touchmove', drag, false);
+slides.addEventListener('mousedown', lock, false);
+slides.addEventListener('touchstart', lock, false);
+slides.addEventListener('mouseup', move, false);
+slides.addEventListener('touchend', move, false);
+slides.addEventListener('touchmove', e => {e.preventDefault()}, false)
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -45,7 +76,7 @@ for (i = 0; i < coll.length; i++) {
 }
 
 for (i = 0; i < 25; i++) {
-  illoSlides.push(`./images/illo_`+i+`.jpg`);
+  illoSlides.push(`./images/illo_`+i+`.png`);
 }
 
 for (i = 0; i < illoSlides.length; i++) {
@@ -74,8 +105,6 @@ function openModal() {
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
-
-var slideIndex = 0;
 
 //next/forward controls
 function plusSlides(n) {
