@@ -33,9 +33,11 @@ var captionList = [
 /*24*/"The Ballad of Bart | Comic"];
 
 slides.style.setProperty('--n',N);
+
 let x0 = null;
-function lock(e) { x0 = unify(e).clientX };
 let slideIndex = 0;
+
+function lock(e) { x0 = unify(e).clientX };
 function move(e) {
   if(x0 || x0 === 0) {
     let dx = unify(e).clientX - x0, s = Math.sign(dx);
@@ -123,7 +125,7 @@ function showSlides(n) {
   var captionText = document.getElementById("caption");
   if (n >= illoSlides.length) {slideIndex = 0}
   if (n < 0) {slideIndex = illoSlides.length-1}
-  slides.firstElementChild.src = illoSlides[slideIndex];
+  slides.style.setProperty('--i', slideIndex);
   captionText.innerHTML = captionList[slideIndex];
   illoThumbs[slideIndex].setAttribute("class","active");
   document.getElementById("thumbnail-slider").scrollTo((pic[slideIndex].offsetLeft-234),0);
