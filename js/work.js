@@ -3,6 +3,9 @@
 var coll = document.getElementsByClassName("collapsible");
 var slides = document.getElementById("currentSlide");
 var thumbs = document.getElementsByClassName("thumbnails");
+var prev = document.querySelector("a.prev");
+var next = document.querySelector("a.next");
+var maxW = window.matchMedia("(max-width:499px)");
 var N = slides.children.length;
 var illoSlides = [];
 var captionList = [
@@ -78,7 +81,14 @@ for (i = 0; i < coll.length; i++) {
 }
 
 for (i = 0; i < 25; i++) {
-  illoSlides.push(`./images/illo_`+i+`.png`);
+  if(maxW.matches) {
+    illoSlides.push(`./images/illo_`+i+`_m.png`);
+    slides.children[i].src = illoSlides[i];
+  } else {
+     illoSlides.push(`./images/illo_`+i+`.png`);
+     slides.children[i].src = illoSlides[i];
+  }
+
 }
 
 for (i = 0; i < illoSlides.length; i++) {
@@ -102,6 +112,10 @@ pic.forEach(e => e.addEventListener('click', function() {
 //open the thing
 function openModal() {
   document.getElementById('myModal').style.display = "block";
+  if(maxW.matches) {
+    prev.style.visibility = "hidden";
+    next.style.visibility = "hidden";
+  }
 }
 //close the thing
 function closeModal() {

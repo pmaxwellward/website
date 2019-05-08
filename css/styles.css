@@ -47,8 +47,18 @@ h1 img {
     position: absolute;
     left: 0;
     right: 0;
+    visibility: visible;
 }
-
+.load-GIF {
+    height: 32px;
+    width: 32px;
+    margin: auto;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 35%;
+}
 .gif-Man img {
     cursor: pointer;
 }

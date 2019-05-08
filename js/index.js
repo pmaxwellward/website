@@ -273,6 +273,7 @@ const intro_04 = [introGIFs[7].src,introGIFs[8].src];
 
 const gifMan = document.querySelector(".gif-Man img");
 const textBox = document.querySelector(".text-Box img");
+const loadGIF = document.querySelector(".load-GIF");
 
 gifMan.src = man_00.name;
 
@@ -358,8 +359,9 @@ shuffle(intro);
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function(){
         textBox.src = first[0];
-        setTimeout(playScene, man_00.length);
-       }, 1000);
+        loadGIF.style.visibility="hidden";
+        playScene(man_00.length);
+       }, 5000);
  }, false);
 
 function pushMan() {
