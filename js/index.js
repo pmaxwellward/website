@@ -287,7 +287,7 @@ var angerIndex = 0;
 var blurbIndex = 0;
 var subIndex = 0;
 var textLength = 3500;
-var buttonOn = false;
+var buttonOn = true;
 var firstPress = false;
 var isSpeaking = false;
 var range = [3,4,5];
@@ -356,12 +356,19 @@ shuffle(blurb);
 shuffle(first);
 shuffle(intro);
 
-document.addEventListener('DOMContentLoaded', function() {
+
+
+document.addEventListener('readystatechange', function() {
+    if(document.readyState == "complete") {
     setTimeout(function(){
         textBox.src = first[0];
         loadGIF.style.visibility="hidden";
         playScene(man_00.length);
-       }, 5000);
+        buttonOn = false;
+       }, 1500);
+    } else {
+        console.log(document.readyState);
+    }
  }, false);
 
 function pushMan() {
@@ -604,7 +611,13 @@ function poke() {
         textBox.style.visibility = "hidden";
         buttonOn = true;
         shuffle(fly);
-        loadScene(man_08);   
+        loadScene(man_08);
+        if(isSpeaking == true) {
+            isSpeaking = false;
+            angerIndex++;
+            blurbIndex++;
+            subIndex = 0;
+        }   
     } else {
         null;
     }
