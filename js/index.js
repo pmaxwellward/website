@@ -356,8 +356,6 @@ shuffle(blurb);
 shuffle(first);
 shuffle(intro);
 
-
-
 document.addEventListener('readystatechange', function() {
     if(document.readyState == "complete") {
     setTimeout(function(){

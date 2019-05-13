@@ -67,8 +67,8 @@ h1 img {
 @media screen and (max-width: 499px) {
     #thumbnail-slider {
         display: block;
-        position: absolute;
-        bottom: 0;
+        position: relative;
+        top: calc(100vh - (65vh + 184.67px));
         left: 0;
         width: 100vw;
         max-width: 1300px;
@@ -78,12 +78,11 @@ h1 img {
 @media screen and (min-width: 500px) {
     #thumbnail-slider {
         display: block;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        margin-left: -350px;
+        position: relative;
+        top: calc(100vh - (65vh + 184.67px));
+        left: 0;
         width: 100vw;
-        max-width: 700px;
+        max-width: 1300px;
         overflow: auto;
     }
 }
@@ -120,7 +119,7 @@ h1 img {
   outline: none;
   font-size: 1em;
   font-family: monospace;
-  border-bottom: 1px solid;
+
 }
 .collapsible img {
     max-width: 100%
@@ -132,6 +131,9 @@ h1 img {
 }
 .active:after {
     content: "\2212";
+}
+.active {
+    border-bottom: 1px solid;
 }
 .content {
     padding: 0 18px;
@@ -252,14 +254,18 @@ h1 img {
 }
 /*caption text*/
 .caption-container {
-    position: absolute;
-    bottom: 160px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    position: static;
+    display: block;
     color: white;
+    text-align: center;
     font-family: monospace;
-    width:100%;
+    width: 100%;
+    height: 5vh;
+}
+.caption-container p {
+    padding-top: calc((100vh - (65vh + 184.67px))/2);
+    cursor: pointer;
+    margin: 0;
 }
 img.thumb-status {
     opacity: 0.6;
@@ -292,5 +298,15 @@ img.hover-shadow {
 ::-webkit-scrollbar-thumb:hover {
     background:rgb(170, 170, 170)
 }
+.card {
+    display: block;
+    margin: auto;
+    width: 75%;
+    border: 1px outset;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 1em;
+ }
 
 * {box-sizing: border-box;}
