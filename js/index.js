@@ -31,60 +31,6 @@ if(maxW.matches) {
         "mGIFs/20.gif",
         "mGIFs/21.gif"
     )
-    pushAnger(
-        "mGIFs/anger_00.gif",
-        "mGIFs/anger_01.gif",
-        "mGIFs/anger_02.gif",
-        "mGIFs/anger_03.gif",
-        "mGIFs/anger_04.gif",
-        "mGIFs/anger_05.gif",
-        "mGIFs/anger_06.gif",
-        "mGIFs/anger_07.gif",
-        "mGIFs/anger_08.gif",
-        "mGIFs/anger_09a.gif",
-        "mGIFs/anger_09b.gif",
-        "mGIFs/anger_10.gif",
-        "mGIFs/anger_11.gif",
-        "mGIFs/anger_12.gif",
-        "mGIFs/anger_13.gif",
-        "mGIFs/anger_14.gif",
-        "mGIFs/anger_15.gif"
-    )
-    pushBlurb(
-        "mGIFs/blurb_00a.gif",
-        "mGIFs/blurb_00b.gif",
-        "mGIFs/blurb_01a.gif",
-        "mGIFs/blurb_01b.gif",
-        "mGIFs/blurb_02a.gif",
-        "mGIFs/blurb_02b.gif",
-        "mGIFs/blurb_03a.gif",
-        "mGIFs/blurb_03b.gif",
-        "mGIFs/blurb_04.gif",
-        "mGIFs/blurb_05a.gif",
-        "mGIFs/blurb_05b.gif",
-        "mGIFs/blurb_05c.gif",
-        "mGIFs/blurb_06a.gif",
-        "mGIFs/blurb_06b.gif",
-        "mGIFs/blurb_07.gif",
-        "mGIFs/blurb_08a.gif",
-        "mGIFs/blurb_08b.gif",
-        "mGIFs/blurb_09.gif",
-        "mGIFs/blurb_10a.gif",
-        "mGIFs/blurb_10b.gif",
-        "mGIFs/blurb_11.gif",
-        "mGIFs/blurb_12a.gif",
-        "mGIFs/blurb_12b.gif",
-        "mGIFs/blurb_13a.gif",
-        "mGIFs/blurb_13b.gif",
-        "mGIFs/blurb_14a.gif",
-        "mGIFs/blurb_14b.gif",
-        "mGIFs/blurb_15.gif",
-        "mGIFs/blurb_16a.gif",
-        "mGIFs/blurb_16b.gif",
-        "mGIFs/blurb_17a.gif",
-        "mGIFs/blurb_17b.gif",
-        "mGIFs/blurb_17c.gif"
-    )
     pushFirst(
         "mGIFs/first_00.gif",
         "mGIFs/first_01.gif",
@@ -128,60 +74,6 @@ if(minW.matches) {
         "GIFs/20.gif",
         "GIFs/21.gif"
     )
-    pushAnger(
-        "GIFs/anger_00.gif",
-        "GIFs/anger_01.gif",
-        "GIFs/anger_02.gif",
-        "GIFs/anger_03.gif",
-        "GIFs/anger_04.gif",
-        "GIFs/anger_05.gif",
-        "GIFs/anger_06.gif",
-        "GIFs/anger_07.gif",
-        "GIFs/anger_08.gif",
-        "GIFs/anger_09a.gif",
-        "GIFs/anger_09b.gif",
-        "GIFs/anger_10.gif",
-        "GIFs/anger_11.gif",
-        "GIFs/anger_12.gif",
-        "GIFs/anger_13.gif",
-        "GIFs/anger_14.gif",
-        "GIFs/anger_15.gif"
-    )
-    pushBlurb(
-        "GIFs/blurb_00a.gif",
-        "GIFs/blurb_00b.gif",
-        "GIFs/blurb_01a.gif",
-        "GIFs/blurb_01b.gif",
-        "GIFs/blurb_02a.gif",
-        "GIFs/blurb_02b.gif",
-        "GIFs/blurb_03a.gif",
-        "GIFs/blurb_03b.gif",
-        "GIFs/blurb_04.gif",
-        "GIFs/blurb_05a.gif",
-        "GIFs/blurb_05b.gif",
-        "GIFs/blurb_05c.gif",
-        "GIFs/blurb_06a.gif",
-        "GIFs/blurb_06b.gif",
-        "GIFs/blurb_07.gif",
-        "GIFs/blurb_08a.gif",
-        "GIFs/blurb_08b.gif",
-        "GIFs/blurb_09.gif",
-        "GIFs/blurb_10a.gif",
-        "GIFs/blurb_10b.gif",
-        "GIFs/blurb_11.gif",
-        "GIFs/blurb_12a.gif",
-        "GIFs/blurb_12b.gif",
-        "GIFs/blurb_13a.gif",
-        "GIFs/blurb_13b.gif",
-        "GIFs/blurb_14a.gif",
-        "GIFs/blurb_14b.gif",
-        "GIFs/blurb_15.gif",
-        "GIFs/blurb_16a.gif",
-        "GIFs/blurb_16b.gif",
-        "GIFs/blurb_17a.gif",
-        "GIFs/blurb_17b.gif",
-        "GIFs/blurb_17c.gif"
-    )
     pushFirst(
         "GIFs/first_00.gif",
         "GIFs/first_01.gif",
@@ -224,41 +116,41 @@ const man_19 = {name: manGIFs[19].src, length: 833.333};    //lipSyncIdle_in
 const man_20 = {name: manGIFs[20].src, length: 1875};       //lipSynceIdle
 const man_21 = {name: manGIFs[21].src, length: 333.333};    //lipSyncIdle_out
 
-const anger_00 = angerGIFs[0].src;
-const anger_01 = angerGIFs[1].src;
-const anger_02 = angerGIFs[2].src;
-const anger_03 = angerGIFs[3].src;
-const anger_04 = angerGIFs[4].src;
-const anger_05 = angerGIFs[5].src;
-const anger_06 = angerGIFs[6].src;
-const anger_07 = angerGIFs[7].src;
-const anger_08 = angerGIFs[8].src;
-const anger_09 = [angerGIFs[9].src, angerGIFs[10].src];
-const anger_10 = angerGIFs[11].src;
-const anger_11 = angerGIFs[12].src;
-const anger_12 = angerGIFs[13].src;
-const anger_13 = angerGIFs[14].src;
-const anger_14 = angerGIFs[15].src;
-const anger_15 = angerGIFs[16].src;
+var anger_00;
+var anger_01;
+var anger_02;
+var anger_03;
+var anger_04;
+var anger_05;
+var anger_06;
+var anger_07;
+var anger_08;
+var anger_09;
+var anger_10;
+var anger_11;
+var anger_12;
+var anger_13;
+var anger_14;
+var anger_15;
 
-const blurb_00 = [blurbGIFs[0].src,blurbGIFs[1].src];
-const blurb_01 = [blurbGIFs[2].src,blurbGIFs[3].src]
-const blurb_02 = [blurbGIFs[4].src,blurbGIFs[5].src]; 
-const blurb_03 = [blurbGIFs[6].src,blurbGIFs[7].src];
-const blurb_04 = blurbGIFs[8].src;
-const blurb_05 = [blurbGIFs[9].src,blurbGIFs[10].src,blurbGIFs[11].src];
-const blurb_06 = [blurbGIFs[12].src,blurbGIFs[13].src];
-const blurb_07 = blurbGIFs[14].src;
-const blurb_08 = [blurbGIFs[15].src,blurbGIFs[16].src];
-const blurb_09 = blurbGIFs[17].src;
-const blurb_10 = [blurbGIFs[18].src,blurbGIFs[19].src];
-const blurb_11 = blurbGIFs[20].src;
-const blurb_12 = [blurbGIFs[21].src,blurbGIFs[22].src];
-const blurb_13 = [blurbGIFs[23].src,blurbGIFs[24].src];
-const blurb_14 = [blurbGIFs[25].src,blurbGIFs[26].src];
-const blurb_15 = blurbGIFs[27].src;
-const blurb_16 = [blurbGIFs[28].src,blurbGIFs[29].src];
-const blurb_17 = [blurbGIFs[30].src,blurbGIFs[31].src,blurbGIFs[32].src];
+var blurb_00;
+var blurb_01;
+var blurb_02;
+var blurb_03;
+var blurb_04;
+var blurb_05;
+var blurb_06;
+var blurb_07;
+var blurb_08;
+var blurb_09;
+var blurb_10;
+var blurb_11;
+var blurb_12;
+var blurb_13;
+var blurb_14;
+var blurb_15;
+var blurb_16;
+var blurb_17;
 
 const first_00 = firstGIFs[0].src;
 const first_01 = firstGIFs[1].src;
@@ -300,44 +192,6 @@ var fly = [
     fly_14,
     fly_15];
 
-var anger = [
-    anger_00,
-    anger_01,
-    anger_02,
-    anger_03,
-    anger_04,
-    anger_05,
-    anger_06,
-    anger_07,
-    anger_08,
-    anger_09,
-    anger_10,
-    anger_11,
-    anger_12,
-    anger_13,
-    anger_14,
-    anger_15];
-
-var blurb = [   
-    blurb_00,
-    blurb_01,
-    blurb_02,
-    blurb_03,
-    blurb_04,
-    blurb_05,
-    blurb_06,
-    blurb_07,
-    blurb_08,
-    blurb_09,
-    blurb_10,
-    blurb_11,
-    blurb_12,
-    blurb_13,
-    blurb_14,
-    blurb_15,
-    blurb_16,
-    blurb_17];
-
 var first = [   
     first_00,
     first_01,
@@ -351,23 +205,214 @@ var intro = [
     intro_03,
     intro_04];
 
-shuffle(anger);
-shuffle(blurb);
+var blurb = [];
+var anger = [];
+
 shuffle(first);
 shuffle(intro);
 
 document.addEventListener('readystatechange', function() {
     if(document.readyState == "complete") {
-    setTimeout(function(){
-        textBox.src = first[0];
-        loadGIF.style.visibility="hidden";
-        playScene(man_00.length);
-        buttonOn = false;
-       }, 1500);
-    } else {
-        console.log(document.readyState);
+        setTimeout(function() {
+            textBox.src = first[0];
+            loadGIF.style.visibility="hidden";
+            playScene(man_00.length);
+            buttonOn = false;
+
+            setTimeout(function() {
+                 if(maxW.matches) {
+                     pushAnger(
+                        "mGIFs/anger_00.gif",
+                        "mGIFs/anger_01.gif",
+                        "mGIFs/anger_02.gif",
+                        "mGIFs/anger_03.gif",
+                        "mGIFs/anger_04.gif",
+                        "mGIFs/anger_05.gif",
+                        "mGIFs/anger_06.gif",
+                        "mGIFs/anger_07.gif",
+                        "mGIFs/anger_08.gif",
+                        "mGIFs/anger_09a.gif",
+                        "mGIFs/anger_09b.gif",
+                        "mGIFs/anger_10.gif",
+                        "mGIFs/anger_11.gif",
+                        "mGIFs/anger_12.gif",
+                        "mGIFs/anger_13.gif",
+                        "mGIFs/anger_14.gif",
+                        "mGIFs/anger_15.gif"
+                    )
+                    pushBlurb(
+                        "mGIFs/blurb_00a.gif",
+                        "mGIFs/blurb_00b.gif",
+                        "mGIFs/blurb_01a.gif",
+                        "mGIFs/blurb_01b.gif",
+                        "mGIFs/blurb_02a.gif",
+                        "mGIFs/blurb_02b.gif",
+                        "mGIFs/blurb_03a.gif",
+                        "mGIFs/blurb_03b.gif",
+                        "mGIFs/blurb_04.gif",
+                        "mGIFs/blurb_05a.gif",
+                        "mGIFs/blurb_05b.gif",
+                        "mGIFs/blurb_05c.gif",
+                        "mGIFs/blurb_06a.gif",
+                        "mGIFs/blurb_06b.gif",
+                        "mGIFs/blurb_07.gif",
+                        "mGIFs/blurb_08a.gif",
+                        "mGIFs/blurb_08b.gif",
+                        "mGIFs/blurb_09.gif",
+                        "mGIFs/blurb_10a.gif",
+                        "mGIFs/blurb_10b.gif",
+                        "mGIFs/blurb_11.gif",
+                        "mGIFs/blurb_12a.gif",
+                        "mGIFs/blurb_12b.gif",
+                        "mGIFs/blurb_13a.gif",
+                        "mGIFs/blurb_13b.gif",
+                        "mGIFs/blurb_14a.gif",
+                        "mGIFs/blurb_14b.gif",
+                        "mGIFs/blurb_15.gif",
+                        "mGIFs/blurb_16a.gif",
+                        "mGIFs/blurb_16b.gif",
+                        "mGIFs/blurb_17a.gif",
+                        "mGIFs/blurb_17b.gif",
+                        "mGIFs/blurb_17c.gif"
+                    )
+                }
+                if(minW.matches) {
+                     pushAnger(
+                        "GIFs/anger_00.gif",
+                        "GIFs/anger_01.gif",
+                        "GIFs/anger_02.gif",
+                        "GIFs/anger_03.gif",
+                        "GIFs/anger_04.gif",
+                        "GIFs/anger_05.gif",
+                        "GIFs/anger_06.gif",
+                        "GIFs/anger_07.gif",
+                        "GIFs/anger_08.gif",
+                        "GIFs/anger_09a.gif",
+                        "GIFs/anger_09b.gif",
+                        "GIFs/anger_10.gif",
+                        "GIFs/anger_11.gif",
+                        "GIFs/anger_12.gif",
+                        "GIFs/anger_13.gif",
+                        "GIFs/anger_14.gif",
+                        "GIFs/anger_15.gif"
+                    )
+                    pushBlurb(
+                        "GIFs/blurb_00a.gif",
+                        "GIFs/blurb_00b.gif",
+                        "GIFs/blurb_01a.gif",
+                        "GIFs/blurb_01b.gif",
+                        "GIFs/blurb_02a.gif",
+                        "GIFs/blurb_02b.gif",
+                        "GIFs/blurb_03a.gif",
+                        "GIFs/blurb_03b.gif",
+                        "GIFs/blurb_04.gif",
+                        "GIFs/blurb_05a.gif",
+                        "GIFs/blurb_05b.gif",
+                        "GIFs/blurb_05c.gif",
+                        "GIFs/blurb_06a.gif",
+                        "GIFs/blurb_06b.gif",
+                        "GIFs/blurb_07.gif",
+                        "GIFs/blurb_08a.gif",
+                        "GIFs/blurb_08b.gif",
+                        "GIFs/blurb_09.gif",
+                        "GIFs/blurb_10a.gif",
+                        "GIFs/blurb_10b.gif",
+                        "GIFs/blurb_11.gif",
+                        "GIFs/blurb_12a.gif",
+                        "GIFs/blurb_12b.gif",
+                        "GIFs/blurb_13a.gif",
+                        "GIFs/blurb_13b.gif",
+                        "GIFs/blurb_14a.gif",
+                        "GIFs/blurb_14b.gif",
+                        "GIFs/blurb_15.gif",
+                        "GIFs/blurb_16a.gif",
+                        "GIFs/blurb_16b.gif",
+                        "GIFs/blurb_17a.gif",
+                        "GIFs/blurb_17b.gif",
+                        "GIFs/blurb_17c.gif"
+                    )
+                }
+                anger_00 = angerGIFs[0].src;
+                anger_01 = angerGIFs[1].src;
+                anger_02 = angerGIFs[2].src;
+                anger_03 = angerGIFs[3].src;
+                anger_04 = angerGIFs[4].src;
+                anger_05 = angerGIFs[5].src;
+                anger_06 = angerGIFs[6].src;
+                anger_07 = angerGIFs[7].src;
+                anger_08 = angerGIFs[8].src;
+                anger_09 = [angerGIFs[9].src, angerGIFs[10].src];
+                anger_10 = angerGIFs[11].src;
+                anger_11 = angerGIFs[12].src;
+                anger_12 = angerGIFs[13].src;
+                anger_13 = angerGIFs[14].src;
+                anger_14 = angerGIFs[15].src;
+                anger_15 = angerGIFs[16].src;
+                blurb_00 = [blurbGIFs[0].src,blurbGIFs[1].src];
+                blurb_01 = [blurbGIFs[2].src,blurbGIFs[3].src]
+                blurb_02 = [blurbGIFs[4].src,blurbGIFs[5].src]; 
+                blurb_03 = [blurbGIFs[6].src,blurbGIFs[7].src];
+                blurb_04 = blurbGIFs[8].src;
+                blurb_05 = [blurbGIFs[9].src,blurbGIFs[10].src,blurbGIFs[11].src];
+                blurb_06 = [blurbGIFs[12].src,blurbGIFs[13].src];
+                blurb_07 = blurbGIFs[14].src;
+                blurb_08 = [blurbGIFs[15].src,blurbGIFs[16].src];
+                blurb_09 = blurbGIFs[17].src;
+                blurb_10 = [blurbGIFs[18].src,blurbGIFs[19].src];
+                blurb_11 = blurbGIFs[20].src;
+                blurb_12 = [blurbGIFs[21].src,blurbGIFs[22].src];
+                blurb_13 = [blurbGIFs[23].src,blurbGIFs[24].src];
+                blurb_14 = [blurbGIFs[25].src,blurbGIFs[26].src];
+                blurb_15 = blurbGIFs[27].src;
+                blurb_16 = [blurbGIFs[28].src,blurbGIFs[29].src];
+                blurb_17 = [blurbGIFs[30].src,blurbGIFs[31].src,blurbGIFs[32].src];
+            
+                anger = [
+                    anger_00,
+                    anger_01,
+                    anger_02,
+                    anger_03,
+                    anger_04,
+                    anger_05,
+                    anger_06,
+                    anger_07,
+                    anger_08,
+                    anger_09,
+                    anger_10,
+                    anger_11,
+                    anger_12,
+                    anger_13,
+                    anger_14,
+                    anger_15];
+                
+                blurb = [   
+                    blurb_00,
+                    blurb_01,
+                    blurb_02,
+                    blurb_03,
+                    blurb_04,
+                    blurb_05,
+                    blurb_06,
+                    blurb_07,
+                    blurb_08,
+                    blurb_09,
+                    blurb_10,
+                    blurb_11,
+                    blurb_12,
+                    blurb_13,
+                    blurb_14,
+                    blurb_15,
+                    blurb_16,
+                    blurb_17];
+                
+                shuffle(anger);
+                shuffle(blurb);
+            }, 1000);
+        }, 1500);
     }
  }, false);
+        
+
 
 function pushMan() {
     for (var i = 0; i < arguments.length; i++) {
