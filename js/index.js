@@ -166,6 +166,7 @@ const intro_04 = [introGIFs[7].src,introGIFs[8].src];
 const gifMan = document.querySelector(".gif-Man img");
 const textBox = document.querySelector(".text-Box img");
 const loadGIF = document.querySelector(".load-GIF");
+const overlay = document.querySelector(".overlay");
 
 gifMan.src = man_00.name;
 
@@ -215,7 +216,8 @@ document.addEventListener('readystatechange', function() {
     if(document.readyState == "complete") {
         setTimeout(function() {
             textBox.src = first[0];
-            loadGIF.style.visibility="hidden";
+            loadGIF.classList.add("fadeOut");
+            overlay.classList.add("fadeOut");
             playScene(man_00.length);
             buttonOn = false;
 
