@@ -6,6 +6,7 @@ var introGIFs = [];
 var maxW = window.matchMedia("(max-width:499px)");
 var minW = window.matchMedia("(min-width:500px)");
 
+//sends image sources as an argument to create & preload images
 if(maxW.matches) {
     pushMan(
         "mGIFs/00.gif",

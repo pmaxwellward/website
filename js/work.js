@@ -1,6 +1,7 @@
 
 //collapsible animation
-var coll = document.getElementsByClassName("collapsible");
+const coll = document.getElementsByClassName("collapsible");
+const content = document.getElementsByClassName("content");
 var slides = document.getElementById("currentSlide");
 var thumbs = document.getElementsByClassName("thumbnails");
 var prev = document.querySelector("a.prev");
@@ -14,26 +15,29 @@ var captionList = [
 /*2*/"Voter Guide NOLA | ANTIGRAVITY Magazine | 2017",
 /*3*/"Voter Guide NOLA | ANTIGRAVITY Magazine | 2017",
 /*4*/"Voter Guide NOLA | ANTIGRAVITY Magazine | 2017",
-/*5*/"Two Steppin' | Sculpture | Show Flyer",
-/*6*/"This Guy's a Grinning | Painting | Show Flyer",
-/*7*/"Parade Flyer | Ink | Parade Flyer",
-/*8*/"Busker Trash | Ink | Show Flyer",
-/*9*/"Pedal Steel | Ink | Show Flyer",
-/*10*/"Portrait | Sen. Bill Caissdy",
-/*11*/"Portrait | Sen. Pat Toomey",
-/*12*/"Old Man | Ink | Personal",
-/*13*/"Triangle Pose | Ink | Personal",
-/*14*/"Do the Zydeco | Ink | Personal",
-/*15*/"String Bean String Band | Ink | Personal",
-/*16*/"Old Folks at the Square Dance | Ink | Personal",
-/*17*/"Fais Do Do | Ink | Personal",
-/*18*/"Have & Have Not 1/6 | Comic",
-/*19*/"Have & Have Not 2/6 | Comic",
-/*20*/"Have & Have Not 3/6 | Comic",
-/*21*/"Have & Have Not 4/6 | Comic",
-/*22*/"Have & Have Not 5/6 | Comic",
-/*23*/"Have & Have Not 6/6 | Comic",
-/*24*/"The Ballad of Bart | Comic"];
+/*5*/"GDS Quarterly Cover | Summer 2019",
+/*6*/"The Cost of Bad Communication | GDS Quarterly | 2019",
+/*7*/"Communication Obstacles | GDS Quarterly | 2019",
+/*8*/"Two Steppin' | Sculpture | Show Flyer",
+/*9*/"This Guy's a Grinning | Painting | Show Flyer",
+/*10*/"Parade Flyer | Ink | Parade Flyer",
+/*11*/"Busker Trash | Ink | Show Flyer",
+/*12*/"Pedal Steel | Ink | Show Flyer",
+/*13*/"Portrait | Sen. Bill Caissdy",
+/*14*/"Portrait | Sen. Pat Toomey",
+/*15*/"Old Man | Ink | Personal",
+/*16*/"Triangle Pose | Ink | Personal",
+/*17*/"Do the Zydeco | Ink | Personal",
+/*18*/"String Bean String Band | Ink | Personal",
+/*19*/"Old Folks at the Square Dance | Ink | Personal",
+/*20*/"Fais Do Do | Ink | Personal",
+/*21*/"Have & Have Not 1/6 | Comic",
+/*22*/"Have & Have Not 2/6 | Comic",
+/*23*/"Have & Have Not 3/6 | Comic",
+/*24*/"Have & Have Not 4/6 | Comic",
+/*25*/"Have & Have Not 5/6 | Comic",
+/*26*/"Have & Have Not 6/6 | Comic",
+/*27*/"The Ballad of Bart | Comic"];
 
 slides.style.setProperty('--n',N);
 
@@ -69,18 +73,56 @@ slides.addEventListener('touchend', move, false);
 slides.addEventListener('touchmove', e => {e.preventDefault()}, false)
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
+  if(window.matchMedia("(max-width:499px)").matches) {
+    coll[i].style.padding = "15px";
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  } else {
+      coll[i].addEventListener("mouseenter", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+      content.addEventListener("mouseenter", function(){
+        this.previousElementSibling.classList.toggle("active");
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+    coll[i].addEventListener("mouseleave", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+      content.addEventListener("mouseleave", function(){
+        this.previousElementSibling.classList.toggle("active");
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  }
 }
 
-for (i = 0; i < 25; i++) {
+for (i = 0; i < captionList.length; i++) {
   if(maxW.matches) {
     illoSlides.push(`./images/illo_`+i+`_m.png`);
     slides.children[i].src = illoSlides[i];

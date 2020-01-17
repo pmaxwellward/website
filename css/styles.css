@@ -160,6 +160,7 @@ h1 img {
             flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
+    padding-top: 10px;
 }
 .work-Thumbs img {
     max-width: 100%;
@@ -364,15 +365,42 @@ img.hover-shadow {
 ::-webkit-scrollbar-thumb:hover {
     background:rgb(170, 170, 170)
 }
-.card {
-    display: block;
-    margin: auto;
-    width: 75%;
+.post {
     border: 1px outset;
-    padding: 20px;
-    margin-top: 20px;
+    margin: 20px 0px 20px 0px;
+ }
+@media screen and (max-width: 499px) {
+    #content {
+        width: 100%;
+        margin: auto;
+    }
+     .post img {
+        float: left;
+        /*margin: auto;*/
+        max-width: 100%;
+        height: auto;
+        padding: 5px 0px 5px 0px;
+     }
+}
+@media screen and (min-width: 500px) {
+    #content {
+        width: 50%;
+        margin: auto;
+    }
+     .post img {
+        float: left;
+        /*margin: auto;*/
+        max-width: 50%;
+        height: auto;
+        padding: 5px;
+     }
+}
+
+.clearfix {
     font-family: monospace;
     font-size: 1em;
+    clear: left;
+    padding: 10px;
  }
 
 * {-webkit-box-sizing: border-box;box-sizing: border-box;}
