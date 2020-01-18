@@ -114,24 +114,35 @@ h1 img {
     #thumbnail-slider {
         display: block;
         position: relative;
-        top: calc(100vh - (65vh + 184.67px));
         left: 0;
         width: 100vw;
         max-width: 1300px;
         overflow: auto;
-        margin: auto;
+    }
+    .caption-container {
+        display: block;
+        color: white;
+        text-align: center;
+        font-family: monospace;
+        font-size: .8em;
+        margin: 10px;
+        width: 100%;
     }
 }
 @media screen and (min-width: 500px) {
     #thumbnail-slider {
         display: block;
-        position: relative;
-        top: calc(100vh - (65vh + 184.67px));
         left: 0;
         width: 100vw;
-        max-width: 1300px;
         overflow: auto;
-        margin: auto;
+    }
+    /*caption text*/
+    .caption-container {
+        display: block;
+        color: white;
+        text-align: center;
+        font-family: monospace;
+        width: 100%;
     }
 }
 .is-Transformed { 
@@ -207,12 +218,16 @@ h1 img {
     display: table;
     clear: both;
 }
+#myModal{
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /*The modal bg*/
 .modal {
-    display:none;
     position: fixed;
     z-index: 1;
-    padding-top: 50px;
+    padding-top: 10vh;
     left: 0;
     top: 0;
     width: 100%;
@@ -238,20 +253,20 @@ h1 img {
 }
 #currentSlide {
     --n: 25;
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     overflow-y: hidden;
     width: 100%;
     width: calc(var(--n)*100%);
     height: 60vh;
     max-height: 100vh;
     -webkit-transform: translate(calc(var(--i, 0)/var(--n)*-100%));
-        -ms-transform: translate(calc(var(--i, 0)/var(--n)*-100%));
-            transform: translate(calc(var(--i, 0)/var(--n)*-100%));
+    -ms-transform: translate(calc(var(--i, 0)/var(--n)*-100%));
+    transform: translate(calc(var(--i, 0)/var(--n)*-100%));
     -webkit-transition: -webkit-transform .5s ease-out;
     transition: -webkit-transform .5s ease-out;
     -o-transition: transform .5s ease-out;
@@ -307,8 +322,11 @@ h1 img {
 }
 /*next button float right*/
 .next {
-    right: 0;
+    right: 15%;
     border-radius: 3px 0 0 3px;
+}
+.prev {
+    left:15%;
 }
 /*drop shadow on hover*/
 .prev:hover,
@@ -316,18 +334,7 @@ h1 img {
     color:white;
     background-color: rgba(0,0,0,0.8);
 }
-/*caption text*/
-.caption-container {
-    position: static;
-    display: block;
-    color: white;
-    text-align: center;
-    font-family: monospace;
-    width: 100%;
-    height: 5vh;
-}
 .caption-container p {
-    padding-top: calc((100vh - (65vh + 184.67px))/2);
     cursor: pointer;
     margin: 0;
 }
@@ -395,7 +402,6 @@ img.hover-shadow {
         padding: 5px;
      }
 }
-
 .clearfix {
     font-family: monospace;
     font-size: 1em;

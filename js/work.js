@@ -153,7 +153,7 @@ pic.forEach(e => e.addEventListener('click', function() {
 
 //open the thing
 function openModal() {
-  document.getElementById('myModal').style.display = "block";
+  document.getElementById('myModal').style.display = "flex";
   if(maxW.matches) {
     prev.style.visibility = "hidden";
     next.style.visibility = "hidden";
