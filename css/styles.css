@@ -128,6 +128,18 @@ h1 img {
         margin: 10px;
         width: 100%;
     }
+    .is-Transformed { 
+        width: 200px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+        text-align: center;
+        font-family: monospace;
+        font-size: .8em;
+    }
 }
 @media screen and (min-width: 500px) {
     #thumbnail-slider {
@@ -144,19 +156,20 @@ h1 img {
         font-family: monospace;
         width: 100%;
     }
+    .is-Transformed { 
+        width: 200px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+        text-align: center;
+        font-family: monospace;
+        font-size: 1em;
+    }
 }
-.is-Transformed { 
-    width: 200px;
-    height: 300px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -100px;
-    margin-top: -100px;
-    text-align: center;
-    font-family: monospace;
-    font-size: 1em;
-}
+
 .is-Transformed a { 
     text-decoration: none;
     color: #888888;
@@ -174,19 +187,57 @@ h1 img {
     padding-top: 10px;
 }
 .work-Thumbs img {
-    max-width: 100%;
+    max-width: 100%;  
 }
-.collapsible {
-  background-color: #FFF;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 1em;
-  font-family: monospace;
+@media screen and (max-width: 499px) {
+    .collapsible {
+      background-color: #FFF;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      outline: none;
+      font-size: .8em;
+      font-family: monospace;
 
+    }
+    .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.2s ease-out;
+        -o-transition: max-height 0.2s ease-out;
+        transition: max-height 0.2s ease-out;
+        text-align: center;
+        font-family: monospace;
+        font-size: .8em;
+    }
+}
+@media screen and (min-width: 500px) {
+    .collapsible {
+      background-color: #FFF;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      outline: none;
+      font-size: 1em;
+      font-family: monospace;
+
+    }
+    .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.2s ease-out;
+        -o-transition: max-height 0.2s ease-out;
+        transition: max-height 0.2s ease-out;
+        text-align: center;
+        font-family: monospace;
+        font-size: 1em;
+    }
 }
 .collapsible img {
     max-width: 100%
@@ -201,17 +252,6 @@ h1 img {
 }
 .active {
     border-bottom: 1px solid;
-}
-.content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: max-height 0.2s ease-out;
-    -o-transition: max-height 0.2s ease-out;
-    transition: max-height 0.2s ease-out;
-    text-align: center;
-    font-family: monospace;
-    font-size: 1em;
 }
 .row:after {
     content:"";
@@ -388,6 +428,12 @@ img.hover-shadow {
         height: auto;
         padding: 5px 0px 5px 0px;
      }
+     .clearfix {
+        font-family: monospace;
+        font-size: .8em;
+        clear: left;
+        padding: 10px;
+     }
 }
 @media screen and (min-width: 500px) {
     #content {
@@ -401,12 +447,13 @@ img.hover-shadow {
         height: auto;
         padding: 5px;
      }
+     .clearfix {
+        font-family: monospace;
+        font-size: 1em;
+        clear: left;
+        padding: 10px;
+     }
 }
-.clearfix {
-    font-family: monospace;
-    font-size: 1em;
-    clear: left;
-    padding: 10px;
- }
+
 
 * {-webkit-box-sizing: border-box;box-sizing: border-box;}
