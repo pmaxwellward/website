@@ -53,7 +53,7 @@
 				<img src="images/news/01_13_20_10.png">
 				<div class="clearfix">
 					Alright, enough "phone: bad" talk.<br>
-					<?php echo date('Y'); ?>
+					<?php //echo date('Y'); ?>
 				</div>
 			</div>
 		</div>
