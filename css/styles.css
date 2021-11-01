@@ -1,11 +1,8 @@
 html{
     -webkit-tap-highlight-color: transparent;
 }
-body {
-    min-height: calc(100vh - 8px);
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
+html, body {
+    margin: 0;
 }
 h1 img {
     max-width: 325px;
@@ -39,25 +36,32 @@ h1 img {
     max-width: 100%;
 }
 .gif-Man, .text-Box {
-    width: calc(.675 * 80vh);
-    height: 889px;
+    width: 100%;
+    max-height: 889px;
     display: block;
-    margin: auto;
+    /* margin: auto;
     max-height: 80vh;
     position: absolute;
     left:0;
-    right:0;
+    right:0; */
+}
+
+.text-Box {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .gif-Man img, .text-Box img {
-    display: block;
+    /* display: block;
     margin: auto;
-    max-height: 100%;
-    max-width: 100%;
+    width: 100%;
     position: absolute;
     left: 0;
     right: 0;
-    visibility: visible;
+    visibility: visible; */
+    width: 100%;
 }
+
 .load-GIF {
     height: 150px;
     width: 150px;
@@ -585,6 +589,25 @@ main {
     object-position: bottom;
     height: 100%;
     cursor: pointer;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.l-mascot {
+    aspect-ratio: 600 / 889;
+    width: 550px;
+    position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+    .l-mascot {
+        width: 95%;
+    }
 }
 
 * {-webkit-box-sizing: border-box;box-sizing: border-box;}
