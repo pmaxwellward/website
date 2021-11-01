@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href ="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <link href="dist/mediabox.css" rel="stylesheet">
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <title>P. Maxwell Ward | illustration</title>
+</head>
+<body>
+	<header>
+		<h1><a href="./"><img src="images/header-thin.svg" alt="header"></a></h1>
+	</header>
+	<div id="menu">
+		<div><a href="./work.html"><img src="images/nav-work_2.svg" alt="work"></a></div>
+		<div><a href="./info.html"><img src="images/nav-info_2.svg" alt="info"></a></div>
+		<div><a href="./news.html"><img src="images/nav-news_2.svg" alt="news"></a></div>
+    </div>
+    <main class="work">
+        <div class="illo-grid">
+            <img src="./images/illo_0.png" onclick="openModal();currentSlide(0)">
+            <img src="./images/illo_1.png" onclick="openModal();currentSlide(1)">
+            <img src="./images/illo_2.png" onclick="openModal();currentSlide(2)">
+            <img src="./images/illo_3.png" onclick="openModal();currentSlide(3)">
+            <img src="./images/illo_4.png" onclick="openModal();currentSlide(4)">
+            <img src="./images/illo_5.png" onclick="openModal();currentSlide(5)">
+            <img src="./images/illo_6.png" onclick="openModal();currentSlide(6)">
+            <img src="./images/illo_7.png" onclick="openModal();currentSlide(7)">
+            <img src="./images/illo_8.png" onclick="openModal();currentSlide(8)">
+            <img src="./images/illo_9.png" onclick="openModal();currentSlide(9)">
+            <img src="./images/illo_10.png" onclick="openModal();currentSlide(10)">
+            <img src="./images/illo_11.png" onclick="openModal();currentSlide(11)">
+            <img src="./images/illo_12.png" onclick="openModal();currentSlide(12)">
+            <img src="./images/illo_13.png" onclick="openModal();currentSlide(13)">
+            <img src="./images/illo_14.png" onclick="openModal();currentSlide(14)">
+            <img src="./images/illo_15.png" onclick="openModal();currentSlide(15)">
+            <img src="./images/illo_16.png" onclick="openModal();currentSlide(16)">
+            <img src="./images/illo_17.png" onclick="openModal();currentSlide(17)">
+            <img src="./images/illo_18.png" onclick="openModal();currentSlide(18)">
+            <img src="./images/illo_19.png" onclick="openModal();currentSlide(19)">
+            <img src="./images/illo_20.png" onclick="openModal();currentSlide(20)">
+            <img src="./images/illo_21.png" onclick="openModal();currentSlide(21)">
+            <img src="./images/illo_22.png" onclick="openModal();currentSlide(22)">
+            <img src="./images/illo_23.png" onclick="openModal();currentSlide(23)">
+            <img src="./images/illo_24.png" onclick="openModal();currentSlide(24)">
+            <img src="./images/illo_25.png" onclick="openModal();currentSlide(25)">
+            <img src="./images/illo_26.png" onclick="openModal();currentSlide(26)">
+            <img src="./images/illo_27.png" onclick="openModal();currentSlide(27)">
+        </div>
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>     
+                <div id="currentSlide">
+                    <img src="./images/illo_0.png">
+                    <img src="./images/illo_1.png">
+                    <img src="./images/illo_2.png">
+                    <img src="./images/illo_3.png">
+                    <img src="./images/illo_4.png">
+                    <img src="./images/illo_5.png">
+                    <img src="./images/illo_6.png">
+                    <img src="./images/illo_7.png">
+                    <img src="./images/illo_8.png">
+                    <img src="./images/illo_9.png">
+                    <img src="./images/illo_10.png">
+                    <img src="./images/illo_11.png">
+                    <img src="./images/illo_12.png">
+                    <img src="./images/illo_13.png">
+                    <img src="./images/illo_14.png">
+                    <img src="./images/illo_15.png">
+                    <img src="./images/illo_16.png">
+                    <img src="./images/illo_17.png">
+                    <img src="./images/illo_18.png">
+                    <img src="./images/illo_19.png">
+                    <img src="./images/illo_20.png">
+                    <img src="./images/illo_21.png">
+                    <img src="./images/illo_22.png">
+                    <img src="./images/illo_23.png">
+                    <img src="./images/illo_24.png">
+                    <img src="./images/illo_25.png">
+                    <img src="./images/illo_26.png">
+                    <img src="./images/illo_27.png">
+                </div>
+                <!--next/prev controls-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!--caption text-->
+                <div class="caption-container" onclick="openFull()">
+                    <p id="caption"></p>
+                    <small><i>(expand)</i></small>     
+            </div>               
+            <!--thumbnail image controls-->            
+            <div id = "thumbnail-slider">        
+                <div class = "thumbnail-grid">
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                    <div class="thumbnail-container"><div class="thumbnails"></div></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="js/work.js"></script>
+    <script type="text/javascript" src="dist/mediabox.js"></script>
+    <script type="text/javascript">
+        MediaBox('.mediabox');
+    </script>
+</body>
+</html>
