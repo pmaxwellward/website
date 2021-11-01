@@ -1,6 +1,5 @@
 html{
     -webkit-tap-highlight-color: transparent;
-
 }
 body {
     min-height: calc(100vh - 8px);
@@ -9,8 +8,7 @@ body {
     margin-left: 0px;
 }
 h1 img {
-    max-width: 75%;
-    max-height: 100%;
+    max-width: 325px;
     display: -webkit-flex;
     -webkit-justify-content: center; 
     display: block;
@@ -32,6 +30,11 @@ h1 img {
             justify-content: space-between; 
     margin: 0 auto;
 }
+
+#menu > div {
+    width: 45px;
+}
+
 #menu img {
     max-width: 100%;
 }
@@ -191,6 +194,7 @@ h1 img {
 }
 @media screen and (max-width: 499px) {
     .collapsible {
+      height: 50px;
       background-color: #FFF;
       cursor: pointer;
       padding: 10px;
@@ -209,9 +213,9 @@ h1 img {
         -webkit-transition: max-height 0.2s ease-out;
         -o-transition: max-height 0.2s ease-out;
         transition: max-height 0.2s ease-out;
-        text-align: center;
+        text-align: left;
         font-family: monospace;
-        font-size: .8em;
+        font-size: .95em;
     }
 }
 @media screen and (min-width: 500px) {
@@ -221,11 +225,11 @@ h1 img {
       padding: 10px;
       width: 100%;
       border: none;
-      text-align: center;
+      text-align: left;
       outline: none;
       font-size: 1em;
       font-family: monospace;
-
+        height: 50px;
     }
     .content {
         padding: 0 18px;
@@ -234,7 +238,7 @@ h1 img {
         -webkit-transition: max-height 0.2s ease-out;
         -o-transition: max-height 0.2s ease-out;
         transition: max-height 0.2s ease-out;
-        text-align: center;
+        text-align: left;
         font-family: monospace;
         font-size: 1em;
     }
@@ -242,15 +246,16 @@ h1 img {
 .collapsible img {
     max-width: 100%
 }
-.collapsible:after {
+.collapsible:after, .item-title:after {
     content: '\002B';
-    float: right;
+    float: left;
     font-size: 1em;
+    margin-right: 1em;
 }
 .active:after {
     content: "\2212";
 }
-.active {
+.active-border {
     border-bottom: 1px solid;
 }
 .row:after {
@@ -330,13 +335,13 @@ h1 img {
     display:inline-block;
     margin: 1px;
     vertical-align: top;
-    width:117px;
+    width:155px;
     cursor: pointer;
 }
 /*Create four equal columns flatoing next to each other*/
 .thumbnails {
     float: left;
-    width: 117px;
+    /* width: 117px; */
 }
 /*next/prev buttons*/
 .prev,
@@ -455,5 +460,131 @@ img.hover-shadow {
      }
 }
 
+.work-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    .work-links {
+        grid-template-columns: 75vw;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+.work { 
+    margin-top: 2.5em;
+}
+
+.work-links > div {
+    display: grid;
+}
+
+.work-link {
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-link > :first-child {
+    max-width: 50%;
+}
+
+.work-link > :last-child {
+    max-width: 100%;
+}
+
+.l-portfolio-item {
+    max-width: 800px;
+}
+
+@media only screen and (max-width: 600px) {
+    .l-portfolio-item {
+        width: 90%;
+    }
+}
+
+.portfolio-img {
+    display: flex;
+    cursor: pointer;
+}
+
+.portfolio-img img {
+    max-width: 100%;
+    height: 100%;
+} 
+
+.desktop-only {
+    /* width: 800px;
+    height: 450px; */
+    aspect-ratio: 16 / 9;
+}
+
+.desktop-mobile {
+    /* width: 800px;
+    height: 336px; */
+    aspect-ratio: 50 / 21;
+    display: grid;
+    grid-template-columns: 75.45% 23.93%;
+    gap: 1.62%;
+}
+
+main { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 5em; */
+}
+
+.item-collapse {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .item-collapse {
+        height: 65px;
+    }
+}
+ 
+.item-github {
+    height: 25px;
+    width: 25px;
+}
+
+.item-github img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.illo-grid {
+    display: grid;
+    grid-template-columns: repeat(4,300px);
+    grid-template-rows: repeat(8,300px);
+    gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .illo-grid {
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(27,300px);
+    }
+}
+
+.illo-grid img {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    height: 100%;
+    cursor: pointer;
+}
 
 * {-webkit-box-sizing: border-box;box-sizing: border-box;}
