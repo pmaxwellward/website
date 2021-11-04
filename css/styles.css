@@ -124,74 +124,54 @@ h1 img {
     cursor: pointer;
 }
 
+#thumbnail-slider {
+    display: block;
+    left: 0;
+    width: 100vw;
+    overflow: auto;
+}
+
+/*caption text*/
+.caption-container {
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    width: 100%;
+}
+
+.is-Transformed { 
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 1em;
+}
+
 @media screen and (max-width: 600px) {
     #thumbnail-slider {
-        display: block;
         position: relative;
-        left: 0;
-        width: 100vw;
         max-width: 1300px;
-        overflow: auto;
     }
 
     .caption-container {
-        display: block;
-        color: white;
-        text-align: center;
-        font-family: monospace;
         font-size: .8em;
         margin: 10px;
-        width: 100%;
     }
 
-    .is-Transformed { 
-        width: 200px;
-        height: 300px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-left: -100px;
-        margin-top: -100px;
-        text-align: center;
-        font-family: monospace;
-        font-size: .8em;
-    }
 }
 
-@media screen and (min-width: 500px) {
-    #thumbnail-slider {
-        display: block;
-        left: 0;
-        width: 100vw;
-        overflow: auto;
-    }
 
-    /*caption text*/
-    .caption-container {
-        display: block;
-        color: white;
-        text-align: center;
-        font-family: monospace;
-        width: 100%;
-    }
 
-    .is-Transformed { 
-        width: 200px;
-        height: 300px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-left: -100px;
-        margin-top: -100px;
-        text-align: center;
-        font-family: monospace;
-        font-size: 1em;
-    }
-}
 
 .is-Transformed a { 
     text-decoration: none;
-    color: #888888;
+    color: #0f40ff;
 }
 
 .work-Thumbs {
@@ -204,7 +184,7 @@ h1 img {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    padding-top: 10px;
+    padding: 10px;
 }
 
 .work-Thumbs img {
@@ -215,7 +195,6 @@ h1 img {
 .collapsible {
     background-color: #FFF;
     /* cursor: pointer; */
-    padding: 10px;
     width: 100%;
     border: none;
     text-align: left;
@@ -227,7 +206,7 @@ h1 img {
 }
 
 .content {
-    padding: 0 18px;
+    /* padding: 0 18px; */
     /* max-height: 0; */
     overflow: hidden;
     -webkit-transition: max-height 0.2s ease-out;
@@ -240,29 +219,7 @@ h1 img {
 }
 
 @media screen and (max-width: 600px) {
-    .collapsible {
-        height: 50px;
-        background-color: #FFF;
-        /* cursor: pointer; */
-        padding: 10px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 1em;
-        font-family: monospace;
-        border-bottom: solid 1px black;
-    }
-
     .content {
-        padding: 0 18px;
-        /* max-height: 0; */
-        overflow: hidden;
-        -webkit-transition: max-height 0.2s ease-out;
-        -o-transition: max-height 0.2s ease-out;
-        transition: max-height 0.2s ease-out;
-        text-align: left;
-        font-family: monospace;
         font-size: .95em;
         margin-bottom: 2.5em;
     }
@@ -481,18 +438,8 @@ img.hover-shadow {
     }
 
      .post img {
-        float: left;
-        /*margin: auto;*/
         max-width: 100%;
-        height: auto;
         padding: 5px 0px 5px 0px;
-     }
-
-     .clearfix {
-        font-family: monospace;
-        font-size: .8em;
-        clear: left;
-        padding: 10px;
      }
 }
 
