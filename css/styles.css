@@ -6,6 +6,10 @@ html, body {
     margin: 0;
 }
 
+h1 {
+    margin: 1em;
+}
+
 h1 img {
     max-width: 325px;
     display: -webkit-flex;
@@ -446,7 +450,8 @@ img.hover-shadow {
 .work-links {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 10%;
+    grid-template-rows: 50vh;
+    grid-gap: 5em;
 }
 
 @media only screen and (max-width: 600px) {
@@ -456,30 +461,34 @@ img.hover-shadow {
     }
 }
 
+.work-main {
+    height: calc(100vh - 129px);
+}
+
 .work { 
     margin-top: 2.5em;
 }
-
+/* 
 .work-links > div {
     display: grid;
-}
+} */
 
 .work-link {
-    justify-self: center;
-    align-self: center;
+    display: grid;
+    grid-template-rows: 10% 90%;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+    justify-items: center;
     align-items: center;
 }
 
-.work-link > :first-child {
-    max-width: 50%;
+.work-link > img {
+    max-height: 100%;
 }
 
-.work-link > :last-child {
-    max-width: 100%;
-}
+/* .work-link > :last-child {
+    max-width: 25%;
+} */
 
 .web-intro {
     max-width: 800px;
@@ -509,7 +518,9 @@ img.hover-shadow {
 
 .portfolio-img img {
     max-width: 100%;
-    height: 100%;
+    /* height: 100%;
+    min-height: 0; */
+    object-fit: contain;
 } 
 
 .desktop-only {
@@ -531,7 +542,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-top: 5em; */
+    justify-content: center;
 }
 
 .item-collapse {
@@ -592,7 +603,7 @@ main {
 
 .l-mascot {
     aspect-ratio: 600 / 889;
-    width: 550px;
+    max-height: calc(100vh - 129px);
     position: relative;
 }
 
